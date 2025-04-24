@@ -1,0 +1,180 @@
+/* Alap stílusok */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.demo-section {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Konténer demonstráció */
+.konter-demo {
+    position: relative;
+}
+
+.demo-label {
+    color: #6c757d;
+    font-family: monospace;
+    margin-bottom: 0.5rem;
+}
+
+/* Grid demonstráció */
+.grid-demo {
+    background-color: rgba(121, 82, 179, 0.1);
+    border: 1px solid rgba(121, 82, 179, 0.3);
+    border-radius: 6px;
+    color: #212529;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+    min-height: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.grid-demo:hover {
+    background-color: rgba(121, 82, 179, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(121, 82, 179, 0.1);
+}
+
+/* Beágyazott grid demo */
+.row .row {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Sortörés demo */
+.w-100 {
+    margin: 1rem 0;
+}
+
+/* Konténer típusok demonstrálása */
+.container,
+.container-fluid,
+.container-sm,
+.container-md,
+.container-lg {
+    background-color: rgba(121, 82, 179, 0.05);
+    border: 1px solid rgba(121, 82, 179, 0.2) !important;
+    border-radius: 6px;
+}
+
+/* Flex igazítások demonstrálása */
+[class*="justify-content"] {
+    background-color: rgba(121, 82, 179, 0.05);
+    border: 1px solid rgba(121, 82, 179, 0.2);
+    border-radius: 6px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Függőleges igazítás demo */
+[class*="align-items"] {
+    background-color: rgba(121, 82, 179, 0.05);
+    border: 1px solid rgba(121, 82, 179, 0.2);
+    border-radius: 6px;
+    padding: 1rem;
+}
+
+/* Szekció címek stílusai */
+h2 {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #7952b3;
+    border-radius: 3px;
+}
+
+.h5 {
+    color: #555;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+/* Interaktív elemek */
+.demo-section {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.demo-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Grid gap demonstráció */
+.row {
+    margin-bottom: 1rem;
+}
+
+/* Offset példák kiemelése */
+[class*="offset-"] .grid-demo {
+    background-color: rgba(121, 82, 179, 0.15);
+}
+
+/* Order példák kiemelése */
+[class*="order-"] .grid-demo {
+    position: relative;
+}
+
+[class*="order-"] .grid-demo::after {
+    content: attr(class);
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.75rem;
+    color: #6c757d;
+    white-space: nowrap;
+}
+
+/* Reszponzív osztályok demonstrálása */
+@media (min-width: 768px) {
+    [class*="col-md"] .grid-demo {
+        background-color: rgba(121, 82, 179, 0.15);
+    }
+}
+
+@media (min-width: 992px) {
+    [class*="col-lg"] .grid-demo {
+        background-color: rgba(121, 82, 179, 0.2);
+    }
+}
+
+/* Fejléc stílusok */
+.bg-dark {
+    background: linear-gradient(45deg, #1a1a1a, #373737) !important;
+}
+
+/* Segéd osztályok */
+.mb-5 {
+    margin-bottom: 3rem !important;
+}
+
+.p-3 {
+    padding: 1rem !important;
+}
+
+/* Konténer határok demonstrálása */
+.border {
+    border-color: rgba(121, 82, 179, 0.2) !important;
+}
+
+/* Példák közötti térköz */
+section:last-child {
+    margin-bottom: 5rem;
+}

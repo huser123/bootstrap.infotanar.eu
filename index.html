@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Modulok</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #6366f1;
+            --secondary-color: #4f46e5;
+            --background-color: #faf7ff;
+            --card-hover: #f5f3ff;
+            --gradient-start: #7c3aed;
+            --gradient-end: #3b82f6;
+            --text-primary: #1e293b;
+            --text-secondary: #475569;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--background-color), #ffffff);
+            line-height: 1.6;
+            color: var(--text-primary);
+        }
+
+        .demo-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            text-decoration: none;
+            color: var(--text-primary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .demo-card:hover {
+            background-color: var(--card-hover);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .demo-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .demo-card:hover::before {
+            opacity: 1;
+        }
+
+        .tag {
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin: 2px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .tag:hover {
+            transform: scale(1.05);
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+            color: white;
+            padding: 3rem 0;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .module-icon {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            transition: transform 0.3s ease;
+        }
+
+        .demo-card:hover .module-icon {
+            transform: scale(1.1);
+        }
+
+        .card-title {
+            color: var(--text-primary);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-description {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: white;
+            padding: 3rem 0;
+            margin-top: 3rem;
+        }
+
+        .footer-link {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: white;
+            text-decoration: none;
+        }
+
+        .container {
+            padding: 0 1.5rem;
+            max-width: 1200px;
+        }
+
+        .grid {
+            display: grid;
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="page-header">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-3">Bootstrap Modulok</h1>
+            <p class="fs-4 opacity-90">Bootstrap 5 komponensek és technikák interaktív bemutatója</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="grid">
+            <a href="modulok/modul_00_-_teljes/modul-00.html" class="demo-card p-4">
+                <div class="module-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h2 class="card-title">Bootstrap 5 Bemutató</h2>
+                <p class="card-description">Teljes Bootstrap 5 komponensek és lehetőségek bemutatása</p>
+                <div>
+                    <span class="tag">bootstrap</span>
+                    <span class="tag">overview</span>
+                </div>
+            </a>
+
+            <a href="modulok/modul_01_bootstrap_alapok/modul-1.html" class="demo-card p-4">
+                <div class="module-icon">
+                    <i class="fas fa-th"></i>
+                </div>
+                <h2 class="card-title">Bootstrap Alapok</h2>
+                <p class="card-description">Grid rendszer és alapvető Bootstrap osztályok használata</p>
+                <div>
+                    <span class="tag">grid</span>
+                    <span class="tag">basics</span>
+                </div>
+            </a>
+
+            <!-- A többi modul hasonló struktúrával, egyedi ikonokkal -->
+            <a href="modulok/modul_02_navigacio_es_hero_szekciok/modul-2.html" class="demo-card p-4">
+                <div class="module-icon">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <h2 class="card-title">Navigáció és Hero Szekciók</h2>
+                <p class="card-description">Modern navigációs sávok és hero szekciók készítése</p>
+                <div>
+                    <span class="tag">navigation</span>
+                    <span class="tag">hero</span>
+                </div>
+            </a>
+
+            <a href="modulok/modul_03_kartyak_es_komponensek/modul-3.html" class="demo-card p-4">
+                <div class="module-icon">
+                    <i class="fas fa-cube"></i>
+                </div>
+                <h2 class="card-title">Kártyák és Komponensek</h2>
+                <p class="card-description">Bootstrap kártyák és alapvető komponensek használata</p>
+                <div>
+                    <span class="tag">cards</span>
+                    <span class="tag">components</span>
+                </div>
+            </a>
+
+            <a href="modulok/modul_04_form_es_input_elemek/modul-4.html" class="demo-card p-4">
+                <div class="module-icon">
+                    <i class="fas fa-wpforms"></i>
+                </div>
+                <h2 class="card-title">Form és Input Elemek</h2>
+                <p class="card-description">Űrlapok és input mezők tervezése Bootstrap segítségével</p>
+                <div>
+                    <span class="tag">forms</span>
+                    <span class="tag">inputs</span>
+                </div>
+            </a>
+
+            <a href="modulok/modul_05_bootstrap_utility_osztalyok/modul-5.html" class="demo-card p-4">
+                <div class="module-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h2 class="card-title">Bootstrap Utility Osztályok</h2>
+                <p class="card-description">Segédosztályok hatékony használata a Bootstrap-ben</p>
+                <div>
+                    <span class="tag">utilities</span>
+                    <span class="tag">helpers</span>
+                </div>
+            </a>
+
+            <a href="modulok/modul_06_layout_komponensek/modul-6.html" class="demo-card p-4">
+                <div class="module-icon">
+                    <i class="fas fa-columns"></i>
+                </div>
+                <h2 class="card-title">Layout Komponensek</h2>
+                <p class="card-description">Komplex oldal layoutok és elrendezések készítése</p>
+                <div>
+                    <span class="tag">layout</span>
+                    <span class="tag">design</span>
+                </div>
+            </a>
+
+            <a href="modulok/modul_07_-_animaciok_es_atmenetek/modul-7.html" class="demo-card p-4">
+                <div class="module-icon">
+                    <i class="fas fa-magic"></i>
+                </div>
+                <h2 class="card-title">Animációk és Átmenetek</h2>
+                <p class="card-description">Interaktív animációk és átmenetek implementálása</p>
+                <div>
+                    <span class="tag">animations</span>
+                    <span class="tag">effects</span>
+                </div>
+            </a>
+
+            <a href="modulok/modul_08_-_egyedi_komponensek/modul-8.html" class="demo-card p-4">
+                <div class="module-icon">
+                    <i class="fas fa-box"></i>
+                </div>
+                <h2 class="card-title">Egyedi Komponensek</h2>
+                <p class="card-description">Saját Bootstrap komponensek tervezése és implementálása</p>
+                <div>
+                    <span class="tag">custom</span>
+                    <span class="tag">advanced</span>
+                </div>
+            </a>
+
+            <a href="modulok/modul_09_-_reszponziv_mintak/modul-9.html" class="demo-card p-4">
+                <div class="module-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h2 class="card-title">Reszponzív Minták</h2>
+                <p class="card-description">Reszponzív webdizájn minták és megoldások</p>
+                <div>
+                    <span class="tag">responsive</span>
+                    <span class="tag">mobile</span>
+                </div>
+            </a>
+
+            <a href="modulok/modul_10_-_css-only_interakciok/modul-10.html" class="demo-card p-4">
+                <div class="module-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h2 class="card-title">CSS-Only Interakciók</h2>
+                <p class="card-description">JavaScript nélküli interaktív komponensek készítése</p>
+                <div>
+                    <span class="tag">css</span>
+                    <span class="tag">interactions</span>
+                </div>
+            </a>
+
+            <a href="modulok/modul_11_-_halado_grid_technikak/modul-11.html" class="demo-card p-4">
+                <div class="module-icon">
+                    <i class="fas fa-border-all"></i>
+                </div>
+                <h2 class="card-title">Haladó Grid Technikák</h2>
+                <p class="card-description">Komplex grid rendszerek és elrendezések</p>
+                <div>
+                    <span class="tag">grid</span>
+                    <span class="tag">advanced</span>
+                </div>
+            </a>
+
+            <a href="modulok/modul_12_-_halado_urlap_technikak/modul-12.html" class="demo-card p-4">
+                <div class="module-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h2 class="card-title">Haladó Űrlap Technikák</h2>
+                <p class="card-description">Komplex űrlapok és validációs megoldások</p>
+                <div>
+                    <span class="tag">forms</span>
+                    <span class="tag">validation</span>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <h3 class="h5 mb-3">Kapcsolat</h3>
+                    <p class="mb-2">Email: <a href="mailto:infotanar@infotanar.eu" class="footer-link">infotanar@infotanar.eu</a></p>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="h5 mb-3">Információk</h3>
+                    <p class="mb-2">Utolsó frissítés: 2025.01.18.</p>
+                    <p>License: <a href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank" class="footer-link">GNU General Public License v3.0</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</html>

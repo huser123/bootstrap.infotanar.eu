@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Haladó Grid Technikák</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="modul-11.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Fejléc -->
+    <header class="grid-fejlec py-5 mb-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h1 class="display-4 fw-bold text-white mb-3">Haladó Grid Technikák</h1>
+                    <p class="lead text-white-50 mb-0">CSS Grid és Bootstrap Grid együttes használata</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- CSS Grid és Bootstrap együtt -->
+        <section class="mb-5">
+            <h2 class="text-center fw-bold mb-4">Hibrid Grid Rendszer</h2>
+
+            <!-- Dashboard layout -->
+            <div class="demo-blokk mb-4">
+                <h3 class="h5 mb-3">Dashboard Layout</h3>
+                <div class="dashboard-grid">
+                    <!-- Oldalsáv -->
+                    <aside class="oldalsav">
+                        <div class="oldalsav-profil">
+                            <img src="https://picsum.photos/100/100?random=1" alt="Profil" class="profil-kep">
+                            <div class="profil-info">
+                                <h4>Nagy János</h4>
+                                <p>Admin</p>
+                            </div>
+                        </div>
+                        <nav class="oldalsav-nav">
+                            <a href="#" class="nav-link aktiv">
+                                <span class="link-ikon">📊</span>
+                                <span>Dashboard</span>
+                            </a>
+                            <a href="#" class="nav-link">
+                                <span class="link-ikon">👥</span>
+                                <span>Felhasználók</span>
+                            </a>
+                            <a href="#" class="nav-link">
+                                <span class="link-ikon">📦</span>
+                                <span>Termékek</span>
+                            </a>
+                            <a href="#" class="nav-link">
+                                <span class="link-ikon">💰</span>
+                                <span>Rendelések</span>
+                            </a>
+                            <a href="#" class="nav-link">
+                                <span class="link-ikon">⚙️</span>
+                                <span>Beállítások</span>
+                            </a>
+                        </nav>
+                    </aside>
+
+                    <!-- Fő tartalom -->
+                    <main class="fo-tartalom">
+                        <!-- Felső kártyák -->
+                        <div class="statisztika-kartyak">
+                            <div class="stat-kartya">
+                                <div class="kartya-ikon" style="background-color: rgba(13, 110, 253, 0.1); color: #0d6efd">
+                                    👥
+                                </div>
+                                <div class="kartya-adat">
+                                    <span class="adat-szam">2,847</span>
+                                    <span class="adat-cimke">Felhasználók</span>
+                                </div>
+                                <div class="kartya-diagram">
+                                    <div class="diagram-oszlop" style="height: 30%"></div>
+                                    <div class="diagram-oszlop" style="height: 70%"></div>
+                                    <div class="diagram-oszlop" style="height: 45%"></div>
+                                    <div class="diagram-oszlop" style="height: 85%"></div>
+                                    <div class="diagram-oszlop aktiv" style="height: 65%"></div>
+                                </div>
+                            </div>
+
+                            <div class="stat-kartya">
+                                <div class="kartya-ikon" style="background-color: rgba(25, 135, 84, 0.1); color: #198754">
+                                    📦
+                                </div>
+                                <div class="kartya-adat">
+                                    <span class="adat-szam">1,438</span>
+                                    <span class="adat-cimke">Termékek</span>
+                                </div>
+                                <div class="kartya-diagram">
+                                    <div class="diagram-oszlop" style="height: 45%"></div>
+                                    <div class="diagram-oszlop" style="height: 60%"></div>
+                                    <div class="diagram-oszlop" style="height: 35%"></div>
+                                    <div class="diagram-oszlop" style="height: 75%"></div>
+                                    <div class="diagram-oszlop aktiv" style="height: 85%"></div>
+                                </div>
+                            </div>
+
+                            <div class="stat-kartya">
+                                <div class="kartya-ikon" style="background-color: rgba(253, 126, 20, 0.1); color: #fd7e14">
+                                    💰
+                                </div>
+                                <div class="kartya-adat">
+                                    <span class="adat-szam">€67.5k</span>
+                                    <span class="adat-cimke">Bevétel</span>
+                                </div>
+                                <div class="kartya-diagram">
+                                    <div class="diagram-oszlop" style="height: 65%"></div>
+                                    <div class="diagram-oszlop" style="height: 45%"></div>
+                                    <div class="diagram-oszlop" style="height: 75%"></div>
+                                    <div class="diagram-oszlop" style="height: 55%"></div>
+                                    <div class="diagram-oszlop aktiv" style="height: 95%"></div>
+                                </div>
+                            </div>
+
+                            <div class="stat-kartya">
+                                <div class="kartya-ikon" style="background-color: rgba(13, 202, 240, 0.1); color: #0dcaf0">
+                                    📈
+                                </div>
+                                <div class="kartya-adat">
+                                    <span class="adat-szam">92%</span>
+                                    <span class="adat-cimke">Növekedés</span>
+                                </div>
+                                <div class="kartya-diagram">
+                                    <div class="diagram-oszlop" style="height: 25%"></div>
+                                    <div class="diagram-oszlop" style="height: 45%"></div>
+                                    <div class="diagram-oszlop" style="height: 65%"></div>
+                                    <div class="diagram-oszlop" style="height: 85%"></div>
+                                    <div class="diagram-oszlop aktiv" style="height: 95%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Grafikonok -->
+                        <div class="grafikon-grid">
+                            <div class="grafikon-kartya">
+                                <div class="kartya-fejlec">
+                                    <h4>Bevétel Elemzés</h4>
+                                    <select class="kartya-szuro">
+                                        <option>Heti</option>
+                                        <option selected>Havi</option>
+                                        <option>Éves</option>
+                                    </select>
+                                </div>
+                                <div class="kartya-test">
+                                    <div class="vonal-grafikon">
+                                        <svg viewBox="0 0 300 150" class="grafikon-svg">
+                                            <path d="M0,150 L50,120 L100,140 L150,80 L200,110 L250,60 L300,90" 
+                                                  class="grafikon-vonal" />
+                                            <circle cx="50" cy="120" r="4" class="grafikon-pont" />
+                                            <circle cx="100" cy="140" r="4" class="grafikon-pont" />
+                                            <circle cx="150" cy="80" r="4" class="grafikon-pont" />
+                                            <circle cx="200" cy="110" r="4" class="grafikon-pont" />
+                                            <circle cx="250" cy="60" r="4" class="grafikon-pont" />
+                                            <circle cx="300" cy="90" r="4" class="grafikon-pont" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="grafikon-kartya">
+                                <div class="kartya-fejlec">
+                                    <h4>Rendelések Megoszlása</h4>
+                                    <select class="kartya-szuro">
+                                        <option>Heti</option>
+                                        <option selected>Havi</option>
+                                        <option>Éves</option>
+                                    </select>
+                                </div>
+                                <div class="kartya-test">
+                                    <div class="kor-grafikon">
+                                        <svg viewBox="0 0 100 100" class="grafikon-svg">
+                                            <circle cx="50" cy="50" r="45" class="grafikon-kor hatter" />
+                                            <circle cx="50" cy="50" r="45" class="grafikon-kor elso" 
+                                                    style="stroke-dasharray: 70.65 282.6" />
+                                            <circle cx="50" cy="50" r="45" class="grafikon-kor masodik" 
+                                                    style="stroke-dasharray: 141.3 282.6" />
+                                        </svg>
+                                        <div class="kor-felirat">
+                                            <span class="felirat-szam">75%</span>
+                                            <span class="felirat-szoveg">Teljesítés</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Táblázat -->
+                        <div class="tablazat-kartya">
+                            <div class="kartya-fejlec">
+                                <h4>Legutóbbi Rendelések</h4>
+                                <div class="fejlec-akcio">
+                                    <button class="btn btn-outline-primary btn-sm">Exportálás</button>
+                                </div>
+                            </div>
+                            <div class="kartya-test">
+                                <div class="tablazat-kontener">
+                                    <table class="rendeles-tablazat">
+                                        <thead>
+                                            <tr>
+                                                <th>Rendelés ID</th>
+                                                <th>Termék</th>
+                                                <th>Dátum</th>
+                                                <th>Összeg</th>
+                                                <th>Státusz</th>
+                                                <th>Műveletek</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>#12345</td>
+                                                <td>
+                                                    <div class="termek-info">
+                                                        <img src="https://picsum.photos/40/40?random=2" alt="Termék">
+                                                        <span>Laptop Pro</span>
+                                                    </div>
+                                                </td>
+                                                <td>2024.01.10</td>
+                                                <td>299.990 Ft</td>
+                                                <td><span class="statusz keszul">Készül</span></td>
+                                                <td>
+                                                    <div class="tablazat-muveletek">
+                                                        <button class="btn btn-sm btn-light">✎</button>
+                                                        <button class="btn btn-sm btn-light">🗑</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>#12346</td>
+                                                <td>
+                                                    <div class="termek-info">
+                                                        <img src="https://picsum.photos/40/40?random=3" alt="Termék">
+                                                        <span>Vezeték nélküli egér</span>
+                                                    </div>
+                                                </td>
+                                                <td>2024.01.09</td>
+                                                <td>12.990 Ft</td>
+                                                <td><span class="statusz teljesitve">Teljesítve</span></td>
+                                                <td>
+                                                    <div class="tablazat-muveletek">
+                                                        <button class="btn btn-sm btn-light">✎</button>
+                                                        <button class="btn btn-sm btn-light">🗑</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>#12347</td>
+                                                <td>
+                                                    <div class="termek-info">
+                                                        <img src="https://picsum.photos/40/40?random=4" alt="Termék">
+                                                        <span>4K Monitor</span>
+                                                    </div>
+                                                </td>
+                                                <td>2024.01.08</td>
+                                                <td>159.990 Ft</td>
+                                                <td><span class="statusz visszautasitva">Visszautasítva</span></td>
+                                                <td>
+                                                    <div class="tablazat-muveletek">
+                                                        <button class="btn btn-sm btn-light">✎</button>
+                                                        <button class="btn btn-sm btn-light">🗑</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+
+                    <!-- Jobb oldalsáv -->
+                    <aside class="jobb-oldalsav">
+                        <!-- Tevékenység -->
+                        <div class="tevekenyseg-kartya">
+                            <div class="kartya-fejlec">
+                                <h4>Legutóbbi Tevékenységek</h4>
+                            </div>
+                            <div class="kartya-test">
+                                <div class="tevekenyseg-lista">
+                                    <div class="tevekenyseg-lista">
+                                        <div class="tevekenyseg-elem">
+                                            <div class="tevekenyseg-ikon" style="background-color: rgba(13, 110, 253, 0.1); color: #0d6efd">
+                                                👤
+                                            </div>
+                                            <div class="tevekenyseg-tartalom">
+                                                <p>Kiss Éva regisztrált</p>
+                                                <span class="tevekenyseg-ido">5 perce</span>
+                                            </div>
+                                        </div>
+                                        <div class="tevekenyseg-elem">
+                                            <div class="tevekenyseg-ikon" style="background-color: rgba(25, 135, 84, 0.1); color: #198754">
+                                                💰
+                                            </div>
+                                            <div class="tevekenyseg-tartalom">
+                                                <p>Új rendelés érkezett</p>
+                                                <span class="tevekenyseg-ido">15 perce</span>
+                                            </div>
+                                        </div>
+                                        <div class="tevekenyseg-elem">
+                                            <div class="tevekenyseg-ikon" style="background-color: rgba(253, 126, 20, 0.1); color: #fd7e14">
+                                                📦
+                                            </div>
+                                            <div class="tevekenyseg-tartalom">
+                                                <p>Termék készleten</p>
+                                                <span class="tevekenyseg-ido">1 órája</span>
+                                            </div>
+                                        </div>
+                                        <div class="tevekenyseg-elem">
+                                            <div class="tevekenyseg-ikon" style="background-color: rgba(13, 202, 240, 0.1); color: #0dcaf0">
+                                                ⚙️
+                                            </div>
+                                            <div class="tevekenyseg-tartalom">
+                                                <p>Rendszer frissítés</p>
+                                                <span class="tevekenyseg-ido">2 órája</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+     
+                            <!-- Tennivalók -->
+                            <div class="tennivalok-kartya">
+                                <div class="kartya-fejlec">
+                                    <h4>Tennivalók</h4>
+                                    <button class="btn btn-sm btn-light">+</button>
+                                </div>
+                                <div class="kartya-test">
+                                    <div class="tennivalok-lista">
+                                        <div class="tennivalo-elem">
+                                            <label class="tennivalo-jelo">
+                                                <input type="checkbox" checked>
+                                                <span>Email-ek megválaszolása</span>
+                                            </label>
+                                            <span class="tennivalo-datum">Ma</span>
+                                        </div>
+                                        <div class="tennivalo-elem">
+                                            <label class="tennivalo-jelo">
+                                                <input type="checkbox">
+                                                <span>Megbeszélés előkészítése</span>
+                                            </label>
+                                            <span class="tennivalo-datum">Holnap</span>
+                                        </div>
+                                        <div class="tennivalo-elem">
+                                            <label class="tennivalo-jelo">
+                                                <input type="checkbox">
+                                                <span>Jelentés írása</span>
+                                            </label>
+                                            <span class="tennivalo-datum">Csütörtök</span>
+                                        </div>
+                                        <div class="tennivalo-elem">
+                                            <label class="tennivalo-jelo">
+                                                <input type="checkbox">
+                                                <span>Projekt áttekintés</span>
+                                            </label>
+                                            <span class="tennivalo-datum">Péntek</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+     
+                <!-- Masonry Layout -->
+                <div class="demo-blokk mb-4">
+                    <h3 class="h5 mb-3">Masonry Layout</h3>
+                    <div class="masonry-grid">
+                        <!-- Rövid kártya -->
+                        <div class="masonry-elem">
+                            <div class="kartya-tartalom">
+                                <h4>Rövid kártya</h4>
+                                <p>Rövid tartalom egy sorban.</p>
+                            </div>
+                        </div>
+     
+                        <!-- Közepes kártya -->
+                        <div class="masonry-elem">
+                            <div class="kartya-tartalom">
+                                <h4>Közepes kártya</h4>
+                                <p>Hosszabb tartalom, amely több sort is elfoglalhat. Lorem ipsum dolor sit amet, 
+                                   consectetur adipiscing elit.</p>
+                                <img src="https://picsum.photos/400/200?random=5" alt="Kép">
+                            </div>
+                        </div>
+     
+                        <!-- Magas kártya -->
+                        <div class="masonry-elem">
+                            <div class="kartya-tartalom">
+                                <h4>Magas kártya</h4>
+                                <p>Nagyon hosszú tartalom több bekezdéssel. Lorem ipsum dolor sit amet, consectetur 
+                                   adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <img src="https://picsum.photos/400/300?random=6" alt="Kép">
+                                <p>További szöveg a kép alatt, hogy még magasabb legyen a kártya.</p>
+                            </div>
+                        </div>
+     
+                        <!-- Rövid képes kártya -->
+                        <div class="masonry-elem">
+                            <div class="kartya-tartalom">
+                                <img src="https://picsum.photos/400/150?random=7" alt="Kép">
+                                <h4>Rövid képes kártya</h4>
+                                <p>Rövid leírás a kép alatt.</p>
+                            </div>
+                        </div>
+     
+                        <!-- Közepes szöveges kártya -->
+                        <div class="masonry-elem">
+                            <div class="kartya-tartalom">
+                                <h4>Közepes szöveges kártya</h4>
+                                <p>Közepes hosszúságú szöveg, amely kellően magas, de nem túl magas.</p>
+                                <div class="kartya-meta">
+                                    <span>2024.01.12</span>
+                                    <span>•</span>
+                                    <span>5 perc olvasás</span>
+                                </div>
+                            </div>
+                        </div>
+     
+                        <!-- Nagy képes kártya -->
+                        <div class="masonry-elem">
+                            <div class="kartya-tartalom">
+                                <img src="https://picsum.photos/400/400?random=8" alt="Kép">
+                                <h4>Nagy képes kártya</h4>
+                                <p>Hosszabb leírás a nagy kép alatt, amely több részletet is tartalmaz a témáról.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+     
+                <!-- Auto-fill és Auto-fit -->
+                <div class="demo-blokk mb-4">
+                    <h3 class="h5 mb-3">Auto-fill és Auto-fit</h3>
+                    
+                    <!-- Auto-fill példa -->
+                    <div class="grid-magyarazat mb-4">
+                        <h4 class="h6 mb-2">Auto-fill</h4>
+                        <div class="autofill-grid">
+                            <div class="grid-elem">1</div>
+                            <div class="grid-elem">2</div>
+                            <div class="grid-elem">3</div>
+                            <div class="grid-elem">4</div>
+                            <div class="grid-elem">5</div>
+                        </div>
+                    </div>
+     
+                    <!-- Auto-fit példa -->
+                    <div class="grid-magyarazat">
+                        <h4 class="h6 mb-2">Auto-fit</h4>
+                        <div class="autofit-grid">
+                            <div class="grid-elem">1</div>
+                            <div class="grid-elem">2</div>
+                            <div class="grid-elem">3</div>
+                            <div class="grid-elem">4</div>
+                            <div class="grid-elem">5</div>
+                        </div>
+                    </div>
+                </div>
+     
+                <!-- Grid területek -->
+                <div class="demo-blokk mb-4">
+                    <h3 class="h5 mb-3">Grid Területek</h3>
+                    <div class="teruletek-grid">
+                        <header class="terulet-fejlec">
+                            <h4>Fejléc terület</h4>
+                        </header>
+                        <nav class="terulet-nav">
+                            <h4>Navigáció</h4>
+                        </nav>
+                        <main class="terulet-tartalom">
+                            <h4>Fő tartalom</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </main>
+                        <aside class="terulet-oldalsav">
+                            <h4>Oldalsáv</h4>
+                        </aside>
+                        <footer class="terulet-lablec">
+                            <h4>Lábléc terület</h4>
+                        </footer>
+                    </div>
+                </div>
+     
+                <!-- Komplex elrendezések -->
+                <div class="demo-blokk">
+                    <h3 class="h5 mb-3">Komplex Layout</h3>
+                    <div class="komplex-grid">
+                        <!-- Kiemelt tartalom -->
+                        <div class="kiemelt-tartalom">
+                            <img src="https://picsum.photos/800/400?random=9" alt="Kiemelt kép">
+                            <div class="kiemelt-info">
+                                <h4>Kiemelt tartalom</h4>
+                                <p>Kiemelt tartalom leírása, amely fontosabb információkat tartalmaz.</p>
+                                <button class="btn btn-primary">Részletek</button>
+                            </div>
+                        </div>
+     
+                        <!-- Kisebb kártyák -->
+                        <div class="kisebb-kartya">
+                            <img src="https://picsum.photos/400/200?random=10" alt="Kép">
+                            <div class="kartya-info">
+                                <h5>Első kártya</h5>
+                                <p>Rövid leírás az első kártyához.</p>
+                            </div>
+                        </div>
+     
+                        <div class="kisebb-kartya">
+                            <img src="https://picsum.photos/400/200?random=11" alt="Kép">
+                            <div class="kartya-info">
+                                <h5>Második kártya</h5>
+                                <p>Rövid leírás a második kártyához.</p>
+                            </div>
+                        </div>
+     
+                        <div class="kisebb-kartya">
+                            <img src="https://picsum.photos/400/200?random=12" alt="Kép">
+                            <div class="kartya-info">
+                                <h5>Harmadik kártya</h5>
+                                <p>Rövid leírás a harmadik kártyához.</p>
+                            </div>
+                        </div>
+     
+                        <div class="kisebb-kartya">
+                            <img src="https://picsum.photos/400/200?random=13" alt="Kép">
+                            <div class="kartya-info">
+                                <h5>Negyedik kártya</h5>
+                                <p>Rövid leírás a negyedik kártyához.</p>
+                            </div>
+                        </div>
+     
+                        <!-- Lista nézet -->
+                        <div class="lista-nezet">
+                            <h4>Lista nézet</h4>
+                            <ul class="lista">
+                                <li class="lista-elem">
+                                    <span class="elem-sorszam">01</span>
+                                    <div class="elem-tartalom">
+                                        <h5>Lista elem címe</h5>
+                                        <p>Lista elem rövid leírása vagy tartalma.</p>
+                                    </div>
+                                    <button class="btn btn-light">→</button>
+                                </li>
+                                <li class="lista-elem">
+                                    <span class="elem-sorszam">02</span>
+                                    <div class="elem-tartalom">
+                                        <h5>Lista elem címe</h5>
+                                        <p>Lista elem rövid leírása vagy tartalma.</p>
+                                    </div>
+                                    <button class="btn btn-light">→</button>
+                                </li>
+                                <li class="lista-elem">
+                                    <span class="elem-sorszam">03</span>
+                                    <div class="elem-tartalom">
+                                        <h5>Lista elem címe</h5>
+                                        <p>Lista elem rövid leírása vagy tartalma.</p>
+                                    </div>
+                                    <button class="btn btn-light">→</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+     
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+     </body>
+     </html>

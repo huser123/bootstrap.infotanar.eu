@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Reszponzív Minták</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="modul-9.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Fejléc -->
+    <header class="reszponziv-fejlec py-5 mb-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h1 class="display-4 fw-bold text-white mb-3">Reszponzív Minták</h1>
+                    <p class="lead text-white-50 mb-0">Hatékony megoldások minden képernyőméretre</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Reszponzív Navigáció -->
+        <section class="mb-5">
+            <h2 class="text-center fw-bold mb-4">Reszponzív Navigáció</h2>
+
+            <!-- Alap navigáció példa -->
+            <div class="demo-blokk mb-5">
+                <h3 class="h5 mb-3">Alap Navigáció</h3>
+                <nav class="navigacio-alap">
+                    <div class="nav-logo">
+                        <a href="#" class="logo-link">LogoTípus</a>
+                    </div>
+                    <button class="nav-toggle">
+                        <span class="toggle-vonal"></span>
+                        <span class="toggle-vonal"></span>
+                        <span class="toggle-vonal"></span>
+                    </button>
+                    <div class="nav-menu">
+                        <ul class="nav-lista">
+                            <li class="nav-elem"><a href="#" class="nav-link aktiv">Főoldal</a></li>
+                            <li class="nav-elem"><a href="#" class="nav-link">Termékek</a></li>
+                            <li class="nav-elem"><a href="#" class="nav-link">Szolgáltatások</a></li>
+                            <li class="nav-elem"><a href="#" class="nav-link">Blog</a></li>
+                            <li class="nav-elem"><a href="#" class="nav-link">Kapcsolat</a></li>
+                        </ul>
+                        <div class="nav-gombok">
+                            <button class="btn btn-outline-primary btn-sm">Bejelentkezés</button>
+                            <button class="btn btn-primary btn-sm">Regisztráció</button>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- Átalakuló navigáció -->
+            <div class="demo-blokk mb-5">
+                <h3 class="h5 mb-3">Átalakuló Navigáció</h3>
+                <div class="oldalmenu-kontener">
+                    <nav class="oldalmenu">
+                        <div class="oldalmenu-fejlec">
+                            <div class="oldalmenu-logo">
+                                <span class="logo-ikon">🚀</span>
+                                <span class="logo-szoveg">BrandNév</span>
+                            </div>
+                            <button class="oldalmenu-kapcsolo">☰</button>
+                        </div>
+                        <div class="oldalmenu-tartalom">
+                            <div class="oldalmenu-kereso">
+                                <input type="search" placeholder="Keresés..." class="kereso-mezo">
+                            </div>
+                            <ul class="oldalmenu-lista">
+                                <li class="menu-kategoria">
+                                    <div class="kategoria-fejlec">
+                                        <span>Főmenü</span>
+                                    </div>
+                                    <ul class="almenu-lista">
+                                        <li class="menu-elem aktiv">
+                                            <a href="#" class="menu-link">
+                                                <span class="menu-ikon">🏠</span>
+                                                <span>Kezdőlap</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-elem">
+                                            <a href="#" class="menu-link">
+                                                <span class="menu-ikon">📊</span>
+                                                <span>Dashboard</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-elem">
+                                            <a href="#" class="menu-link">
+                                                <span class="menu-ikon">📁</span>
+                                                <span>Projektek</span>
+                                                <span class="menu-jelzo">4</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="menu-kategoria">
+                                    <div class="kategoria-fejlec">
+                                        <span>Kezelés</span>
+                                    </div>
+                                    <ul class="almenu-lista">
+                                        <li class="menu-elem">
+                                            <a href="#" class="menu-link">
+                                                <span class="menu-ikon">👥</span>
+                                                <span>Felhasználók</span>
+                                            </a>
+                                        </li>
+                                        <li class="menu-elem">
+                                            <a href="#" class="menu-link">
+                                                <span class="menu-ikon">⚙️</span>
+                                                <span>Beállítások</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="oldalmenu-lablec">
+                            <div class="felhasznalo">
+                                <img src="https://picsum.photos/32/32?random=1" alt="Profil" class="felhasznalo-kep">
+                                <div class="felhasznalo-info">
+                                    <span class="felhasznalo-nev">Nagy János</span>
+                                    <span class="felhasznalo-szerep">Admin</span>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                    <div class="oldalmenu-tartalom-terulet">
+                        <div class="demo-szoveg p-4">
+                            Tartalom helye - Az oldalsó menü reszponzív módon elcsúszik/eltűnik kisebb képernyőn
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mega menü -->
+            <div class="demo-blokk">
+                <h3 class="h5 mb-3">Mega Menü</h3>
+                <nav class="navigacio-mega">
+                    <div class="nav-tartalom">
+                        <div class="nav-fejlec">
+                            <div class="nav-logo">LogoTípus</div>
+                            <button class="nav-toggle">☰</button>
+                        </div>
+                        <div class="nav-menu">
+                            <ul class="menu-lista">
+                                <li class="menu-elem">
+                                    <a href="#" class="menu-link">Főoldal</a>
+                                </li>
+                                <li class="menu-elem dropdown">
+                                    <a href="#" class="menu-link">Termékek</a>
+                                    <div class="mega-panel">
+                                        <div class="panel-grid">
+                                            <div class="panel-oszlop">
+                                                <h4>Kategóriák</h4>
+                                                <ul class="panel-lista">
+                                                    <li><a href="#">Elektronika</a></li>
+                                                    <li><a href="#">Ruházat</a></li>
+                                                    <li><a href="#">Otthon</a></li>
+                                                    <li><a href="#">Sport</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="panel-oszlop">
+                                                <h4>Márkák</h4>
+                                                <ul class="panel-lista">
+                                                    <li><a href="#">Apple</a></li>
+                                                    <li><a href="#">Samsung</a></li>
+                                                    <li><a href="#">Nike</a></li>
+                                                    <li><a href="#">Adidas</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="panel-oszlop">
+                                                <h4>Kiemelt</h4>
+                                                <div class="kiemelt-termek">
+                                                    <img src="https://picsum.photos/200/150?random=2" alt="Kiemelt termék">
+                                                    <h5>Új kollekció</h5>
+                                                    <p>Fedezze fel új termékeinket</p>
+                                                    <button class="btn btn-sm btn-primary">Megnézem</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="menu-elem dropdown">
+                                    <a href="#" class="menu-link">Szolgáltatások</a>
+                                    <div class="mega-panel">
+                                        <div class="panel-grid">
+                                            <div class="panel-oszlop">
+                                                <h4>Üzleti</h4>
+                                                <ul class="panel-lista">
+                                                    <li><a href="#">Tanácsadás</a></li>
+                                                    <li><a href="#">Tervezés</a></li>
+                                                    <li><a href="#">Fejlesztés</a></li>
+                                                    <li><a href="#">Marketing</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="panel-oszlop">
+                                                <h4>Támogatás</h4>
+                                                <ul class="panel-lista">
+                                                    <li><a href="#">Dokumentáció</a></li>
+                                                    <li><a href="#">FAQ</a></li>
+                                                    <li><a href="#">Közösség</a></li>
+                                                    <li><a href="#">Kapcsolat</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="panel-oszlop">
+                                                <div class="szolgaltatas-promo">
+                                                    <div class="promo-ikon">🚀</div>
+                                                    <h5>Prémium támogatás</h5>
+                                                    <p>Dedikált segítségnyújtás</p>
+                                                    <button class="btn btn-sm btn-outline-primary">További információ</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="menu-elem">
+                                    <a href="#" class="menu-link">Blog</a>
+                                </li>
+                                <li class="menu-elem">
+                                    <a href="#" class="menu-link">Kapcsolat</a>
+                                </li>
+                            </ul>
+                            <div class="menu-akcio">
+                                <button class="btn btn-primary">Próbaidőszak</button>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Reszponzív Táblázatok -->
+        <section class="mb-5">
+            <h2 class="text-center fw-bold mb-4">Reszponzív Táblázatok</h2>
+
+            <!-- Horizontális görgetés -->
+            <div class="demo-blokk mb-5">
+                <h3 class="h5 mb-3">Horizontális Görgetés</h3>
+                <div class="tablazat-kontener scroll">
+                    <table class="tablazat">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Termék neve</th>
+                                <th>Kategória</th>
+                                <th>Raktáron</th>
+                                <th>Egységár</th>
+                                <th>Értékelés</th>
+                                <th>Státusz</th>
+                                <th>Műveletek</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#1</td>
+                                <td>
+                                    <div class="termek-info">
+                                        <img src="https://picsum.photos/40/40?random=3" alt="Termék">
+                                        <span>Laptop Pro</span>
+                                    </div>
+                                </td>
+                                <td>Elektronika</td>
+                                <td>124 db</td>
+                                <td>299.990 Ft</td>
+                                <td>
+                                    <div class="ertekeles">
+                                        <span class="csillag">★★★★</span>
+                                        <span class="pontszam">4.2</span>
+                                    </div>
+                                </td>
+                                <td><span class="statusz aktiv">Aktív</span></td>
+                                <td>
+                                    <div class="muveletek">
+                                        <button class="btn btn-sm btn-light">✎</button>
+                                        <button class="btn btn-sm btn-light">🗑</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#2</td>
+                                <td>
+                                    <div class="termek-info">
+                                        <img src="https://picsum.photos/40/40?random=4" alt="Termék">
+                                        <span>Vezeték nélküli egér</span>
+                                    </div>
+                                </td>
+                                <td>Kiegészítők</td>
+                                <td>45 db</td>
+                                <td>12.990 Ft</td>
+                                <td>
+                                    <div class="ertekeles">
+                                        <span class="csillag">★★★★★</span>
+                                        <span class="pontszam">4.8</span>
+                                    </div>
+                                </td>
+                                <td><span class="statusz keszlethiany">Készlethiány</span></td>
+                                <td>
+                                    <div class="muveletek">
+                                        <button class="btn btn-sm btn-light">✎</button>
+                                        <button class="btn btn-sm btn-light">🗑</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#3</td>
+                                <td>
+                                    <div class="termek-info">
+                                        <img src="https://picsum.photos/40/40?random=5" alt="Termék">
+                                        <span>4K Monitor</span>
+                                    </div>
+                                </td>
+                                <td>Elektronika</td>
+                                <td>18 db</td>
+                                <td>159.990 Ft</td>
+                                <td>
+                                    <div class="ertekeles">
+                                        <span class="csillag">★★★★</span>
+                                        <span class="pontszam">4.5</span>
+                                    </div>
+                                </td>
+                                <td><span class="statusz aktiv">Aktív</span></td>
+                                <td>
+                                    <div class="muveletek">
+                                        <button class="btn btn-sm btn-light">✎</button>
+                                        <button class="btn btn-sm btn-light">🗑</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+ 
+            <!-- Kártya nézet -->
+            <div class="demo-blokk mb-5">
+                <h3 class="h5 mb-3">Kártya Nézet <small class="text-muted">(mobil optimalizált)</small></h3>
+                <div class="tablazat-kartyak">
+                    <div class="kartya">
+                        <div class="kartya-fejlec">
+                            <div class="termek-info">
+                                <img src="https://picsum.photos/60/60?random=6" alt="Termék">
+                                <div class="termek-adatok">
+                                    <h4>Laptop Pro</h4>
+                                    <span class="kategoria">Elektronika</span>
+                                </div>
+                            </div>
+                            <div class="kartya-muveletek">
+                                <button class="btn btn-sm btn-light">✎</button>
+                                <button class="btn btn-sm btn-light">🗑</button>
+                            </div>
+                        </div>
+                        <div class="kartya-tartalom">
+                            <div class="adat-sor">
+                                <span class="cimke">Azonosító</span>
+                                <span class="ertek">#1</span>
+                            </div>
+                            <div class="adat-sor">
+                                <span class="cimke">Raktáron</span>
+                                <span class="ertek">124 db</span>
+                            </div>
+                            <div class="adat-sor">
+                                <span class="cimke">Egységár</span>
+                                <span class="ertek">299.990 Ft</span>
+                            </div>
+                            <div class="adat-sor">
+                                <span class="cimke">Értékelés</span>
+                                <div class="ertekeles">
+                                    <span class="csillag">★★★★</span>
+                                    <span class="pontszam">4.2</span>
+                                </div>
+                            </div>
+                            <div class="adat-sor">
+                                <span class="cimke">Státusz</span>
+                                <span class="statusz aktiv">Aktív</span>
+                            </div>
+                        </div>
+                    </div>
+ 
+                    <div class="kartya">
+                        <div class="kartya-fejlec">
+                            <div class="termek-info">
+                                <img src="https://picsum.photos/60/60?random=7" alt="Termék">
+                                <div class="termek-adatok">
+                                    <h4>Vezeték nélküli egér</h4>
+                                    <span class="kategoria">Kiegészítők</span>
+                                </div>
+                            </div>
+                            <div class="kartya-muveletek">
+                                <button class="btn btn-sm btn-light">✎</button>
+                                <button class="btn btn-sm btn-light">🗑</button>
+                            </div>
+                        </div>
+                        <div class="kartya-tartalom">
+                            <div class="adat-sor">
+                                <span class="cimke">Azonosító</span>
+                                <span class="ertek">#2</span>
+                            </div>
+                            <div class="adat-sor">
+                                <span class="cimke">Raktáron</span>
+                                <span class="ertek">45 db</span>
+                            </div>
+                            <div class="adat-sor">
+                                <span class="cimke">Egységár</span>
+                                <span class="ertek">12.990 Ft</span>
+                            </div>
+                            <div class="adat-sor">
+                                <span class="cimke">Értékelés</span>
+                                <div class="ertekeles">
+                                    <span class="csillag">★★★★★</span>
+                                    <span class="pontszam">4.8</span>
+                                </div>
+                            </div>
+                            <div class="adat-sor">
+                                <span class="cimke">Státusz</span>
+                                <span class="statusz keszlethiany">Készlethiány</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+ 
+            <!-- Lista nézet -->
+            <div class="demo-blokk">
+                <h3 class="h5 mb-3">Lista Nézet <small class="text-muted">(kompakt mobil változat)</small></h3>
+                <div class="tablazat-lista">
+                    <div class="lista-elem">
+                        <div class="elem-fejlec">
+                            <div class="termek-info">
+                                <img src="https://picsum.photos/40/40?random=8" alt="Termék">
+                                <div class="termek-adatok">
+                                    <span class="termek-nev">Laptop Pro</span>
+                                    <span class="termek-azonosito">#1</span>
+                                </div>
+                            </div>
+                            <span class="statusz aktiv">Aktív</span>
+                        </div>
+                        <div class="elem-adatok">
+                            <div class="adat-csoport">
+                                <span class="adat-ertek">124 db</span>
+                                <span class="adat-cimke">Raktáron</span>
+                            </div>
+                            <div class="adat-csoport">
+                                <span class="adat-ertek">299.990 Ft</span>
+                                <span class="adat-cimke">Egységár</span>
+                            </div>
+                            <div class="adat-csoport">
+                                <div class="ertekeles">
+                                    <span class="csillag">★★★★</span>
+                                    <span class="pontszam">4.2</span>
+                                </div>
+                                <span class="adat-cimke">Értékelés</span>
+                            </div>
+                        </div>
+                        <div class="elem-muveletek">
+                            <button class="btn btn-sm btn-light">✎</button>
+                            <button class="btn btn-sm btn-light">🗑</button>
+                        </div>
+                    </div>
+ 
+                    <div class="lista-elem">
+                        <div class="elem-fejlec">
+                            <div class="termek-info">
+                                <img src="https://picsum.photos/40/40?random=9" alt="Termék">
+                                <div class="termek-adatok">
+                                    <span class="termek-nev">Vezeték nélküli egér</span>
+                                    <span class="termek-azonosito">#2</span>
+                                </div>
+                            </div>
+                            <span class="statusz keszlethiany">Készlethiány</span>
+                        </div>
+                        <div class="elem-adatok">
+                            <div class="adat-csoport">
+                                <span class="adat-ertek">45 db</span>
+                                <span class="adat-cimke">Raktáron</span>
+                            </div>
+                            <div class="adat-csoport">
+                                <span class="adat-ertek">12.990 Ft</span>
+                                <span class="adat-cimke">Egységár</span>
+                            </div>
+                            <div class="adat-csoport">
+                                <div class="ertekeles">
+                                    <span class="csillag">★★★★★</span>
+                                    <span class="pontszam">4.8</span>
+                                </div>
+                                <span class="adat-cimke">Értékelés</span>
+                            </div>
+                        </div>
+                        <div class="elem-muveletek">
+                            <button class="btn btn-sm btn-light">✎</button>
+                            <button class="btn btn-sm btn-light">🗑</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
+        <!-- Reszponzív média -->
+        <section class="mb-5">
+            <h2 class="text-center fw-bold mb-4">Reszponzív Média</h2>
+ 
+            <!-- Képek -->
+            <div class="demo-blokk mb-5">
+                <h3 class="h5 mb-3">Reszponzív Képek</h3>
+                
+                <!-- Képarányok -->
+                <div class="keparanyok mb-4">
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="kep-kontener arany-16-9">
+                                <img src="https://picsum.photos/1600/900?random=10" alt="16:9 arányú kép">
+                                <div class="kep-felirat">16:9 képarány</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="kep-kontener arany-4-3">
+                                <img src="https://picsum.photos/800/600?random=11" alt="4:3 arányú kép">
+                                <div class="kep-felirat">4:3 képarány</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="kep-kontener arany-1-1">
+                                <img src="https://picsum.photos/600/600?random=12" alt="1:1 arányú kép">
+                                <div class="kep-felirat">1:1 képarány</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+ 
+                <!-- Képgaléria -->
+                <div class="kep-galeria">
+                    <div class="galeria-container">
+                        <div class="galeria-elem">
+                            <img src="https://picsum.photos/400/400?random=13" alt="Galéria kép">
+                        </div>
+                        <div class="galeria-elem">
+                            <img src="https://picsum.photos/400/400?random=14" alt="Galéria kép">
+                        </div>
+                        <div class="galeria-elem">
+                            <img src="https://picsum.photos/400/400?random=15" alt="Galéria kép">
+                        </div>
+                        <div class="galeria-elem">
+                            <img src="https://picsum.photos/400/400?random=16" alt="Galéria kép">
+                        </div>
+                        <div class="galeria-elem">
+                            <img src="https://picsum.photos/400/400?random=17" alt="Galéria kép">
+                            <div class="tovabbi-overlay">
+                                <span class="tovabbi-szam">+3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+ 
+            <!-- Videók -->
+            <div class="demo-blokk">
+                <h3 class="h5 mb-3">Reszponzív Videók</h3>
+ 
+                <!-- YouTube beágyazás -->
+                <div class="video-kontener mb-4">
+                    <div class="video-wrapper arany-16-9">
+                        <iframe 
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+ 
+                <!-- Egyedi videólejátszó -->
+                <div class="video-kontener">
+                    <div class="video-wrapper arany-16-9">
+                        <div class="video-helyorzo">
+                            <img src="https://picsum.photos/1600/900?random=18" alt="Videó előnézet">
+                            <button class="lejatszas-gomb">
+                                <span class="lejatszas-ikon">▶</span>
+                            </button>
+                            <div class="video-info">
+                                <h4>Bemutató videó</h4>
+                                <p>Ismerje meg szolgáltatásainkat</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
+        <!-- Reszponzív tipográfia -->
+        <section class="mb-5">
+            <h2 class="text-center fw-bold mb-4">Reszponzív Tipográfia</h2>
+ 
+            <!-- Címsorok -->
+            <div class="demo-blokk mb-5">
+                <h3 class="h5 mb-3">
+                    <h3 class="h5 mb-3">Címsorok és Alcímek</h3>
+               <div class="tipografia-demo">
+                   <div class="reszponziv-cimsor-1">
+                       <h1>Főcímsor első szintű</h1>
+                       <p class="alcim">Nagy méretű főcím kiemelésekhez és fontos szekciókhoz</p>
+                   </div>
+                   <div class="reszponziv-cimsor-2">
+                       <h2>Címsor második szintű</h2>
+                       <p class="alcim">Alszekciók és kisebb tartalmak címeihez</p>
+                   </div>
+                   <div class="reszponziv-cimsor-3">
+                       <h3>Címsor harmadik szintű</h3>
+                       <p class="alcim">Közepes méretű címsorok tartalmi blokkokhoz</p>
+                   </div>
+                   <div class="reszponziv-cimsor-4">
+                       <h4>Címsor negyedik szintű</h4>
+                       <p class="alcim">Kisebb tartalmi egységek elkülönítéséhez</p>
+                   </div>
+                   <div class="reszponziv-cimsor-5">
+                       <h5>Címsor ötödik szintű</h5>
+                       <p class="alcim">Apróbb részletek és listaelemek címeihez</p>
+                   </div>
+                   <div class="reszponziv-cimsor-6">
+                       <h6>Címsor hatodik szintű</h6>
+                       <p class="alcim">Legkisebb címsor méret a hierarchiában</p>
+                   </div>
+               </div>
+           </div>
+
+           <!-- Szövegtörzsek -->
+           <div class="demo-blokk mb-5">
+               <h3 class="h5 mb-3">Szövegtörzsek</h3>
+               <div class="tipografia-demo">
+                   <div class="szovegtorzs">
+                       <p class="lead">
+                           Ez egy kiemelt bevezető szöveg, amit általában az oldal vagy szekció elején használunk
+                           a tartalom rövid összefoglalására. A betűméret automatikusan igazodik a képernyő méretéhez.
+                       </p>
+                       
+                       <p>
+                           Ez egy normál bekezdés szöveg, amely bemutatja az alapértelmezett betűméretet és sortávolságot.
+                           A szöveg könnyen olvasható marad minden képernyőméreten. Az olvashatóság érdekében a sorok
+                           hossza és a bekezdések közötti térköz is automatikusan változik.
+                       </p>
+
+                       <p>
+                           Ebben a bekezdésben különböző <strong>kiemeléseket</strong> és <em>hangsúlyokat</em> is
+                           bemutatunk. A <a href="#">hivatkozások</a> és egyéb interaktív elemek mérete is
+                           a reszponzív tipográfia része.
+                       </p>
+
+                       <blockquote class="reszponziv-idezet">
+                           <p>Ez egy kiemelt idézet vagy fontos gondolat, amely vizuálisan is elkülönül a szövegtörzstől.
+                              Az idézet formázása és méretezése is reszponzív módon változik.</p>
+                           <footer>- Szerző neve</footer>
+                       </blockquote>
+
+                       <div class="reszponziv-lista">
+                           <h4>Rendezett lista példa:</h4>
+                           <ol>
+                               <li>Első szintű listaelem hosszabb szöveggel, hogy látható legyen a sortörés viselkedése</li>
+                               <li>Második szintű listaelem
+                                   <ol>
+                                       <li>Beágyazott listaelem első szint</li>
+                                       <li>Beágyazott listaelem második szint</li>
+                                   </ol>
+                               </li>
+                               <li>Harmadik szintű listaelem</li>
+                           </ol>
+
+                           <h4>Rendezetlen lista példa:</h4>
+                           <ul>
+                               <li>Fontos listaelem kiemelése
+                                   <ul>
+                                       <li>Részletes információ az első ponthoz</li>
+                                       <li>További részletek magyarázattal</li>
+                                   </ul>
+                               </li>
+                               <li>Második főpont a listában</li>
+                               <li>Harmadik főpont részletekkel</li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+           </div>
+
+           <!-- Tipográfiai segédosztályok -->
+           <div class="demo-blokk">
+               <h3 class="h5 mb-3">Tipográfiai Segédosztályok</h3>
+               <div class="tipografia-seged">
+                   <div class="pelda-sor">
+                       <span class="cimke">Nagy méret:</span>
+                       <span class="szoveg-nagy">Nagyobb méretű szöveg kiemeléshez</span>
+                   </div>
+                   <div class="pelda-sor">
+                       <span class="cimke">Kis méret:</span>
+                       <span class="szoveg-kicsi">Kisebb méretű szöveg másodlagos információkhoz</span>
+                   </div>
+                   <div class="pelda-sor">
+                       <span class="cimke">Kiemelés:</span>
+                       <span class="szoveg-kiemelt">Kiemelt fontosságú szövegrész</span>
+                   </div>
+                   <div class="pelda-sor">
+                       <span class="cimke">Halványított:</span>
+                       <span class="szoveg-halvany">Halványított, másodlagos szöveg</span>
+                   </div>
+                   <div class="pelda-sor">
+                       <span class="cimke">Monospace:</span>
+                       <span class="szoveg-mono">Rögzített szélességű betűtípus</span>
+                   </div>
+                   <div class="pelda-sor">
+                       <span class="cimke">Nagybetűs:</span>
+                       <span class="szoveg-nagy-betu">Nagybetűs szöveg</span>
+                   </div>
+               </div>
+           </div>
+       </section>
+   </div>
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

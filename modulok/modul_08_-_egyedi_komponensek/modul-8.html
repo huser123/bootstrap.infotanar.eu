@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Egyedi Komponensek</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="modul-8.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Fejléc -->
+    <header class="egyedi-fejlec py-5 mb-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h1 class="display-4 fw-bold text-white mb-3">Egyedi Komponensek</h1>
+                    <p class="lead text-white-50 mb-0">Modern és újrahasználható Bootstrap elemek</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Kreatív kártyák -->
+        <section class="mb-5">
+            <h2 class="text-center fw-bold mb-4">Kreatív Kártyák</h2>
+            <div class="row g-4">
+                <!-- Átfedéses kártya -->
+                <div class="col-md-4">
+                    <div class="kreativ-kartya atfedes">
+                        <div class="kartya-media">
+                            <img src="https://picsum.photos/800/600?random=1" alt="Kártya kép">
+                            <div class="kartya-tag">Kiemelt</div>
+                        </div>
+                        <div class="kartya-tartalom">
+                            <span class="kartya-kategoria">Tervezés</span>
+                            <h3 class="kartya-cim">Modern Design</h3>
+                            <p class="kartya-szoveg">Egy teljesen új megközelítés a modern webtervezésben, amely ötvözi az esztétikát és funkcionalitást.</p>
+                            <div class="kartya-footer">
+                                <div class="szerzo">
+                                    <img src="https://picsum.photos/32/32?random=10" alt="Szerző" class="szerzo-avatar">
+                                    <span class="szerzo-nev">Nagy János</span>
+                                </div>
+                                <span class="olvasasi-ido">5 perc</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3D kártya -->
+                <div class="col-md-4">
+                    <div class="kreativ-kartya haromd">
+                        <div class="kartya-belso">
+                            <div class="kartya-elol">
+                                <div class="kartya-ikon">🎨</div>
+                                <h3 class="kartya-cim">3D Effektek</h3>
+                                <p class="kartya-szoveg">Fedezd fel a modern webtervezés háromdimenziós lehetőségeit.</p>
+                                <button class="btn btn-primary kartya-gomb">Részletek</button>
+                            </div>
+                            <div class="kartya-hatul">
+                                <h3 class="kartya-cim">Részletes Információk</h3>
+                                <ul class="kartya-lista">
+                                    <li>CSS transzformációk</li>
+                                    <li>3D effektek</li>
+                                    <li>Interaktív elemek</li>
+                                    <li>Modern megjelenés</li>
+                                </ul>
+                                <button class="btn btn-outline-light kartya-gomb">Bezárás</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gradiens kártya -->
+                <div class="col-md-4">
+                    <div class="kreativ-kartya gradiens">
+                        <div class="kartya-tartalom">
+                            <div class="kartya-ikonok">
+                                <span class="ikon">⭐</span>
+                                <span class="ikon">🚀</span>
+                                <span class="ikon">💡</span>
+                            </div>
+                            <h3 class="kartya-cim">Gradiens Dizájn</h3>
+                            <p class="kartya-szoveg">Modern színátmenetek és egyedi megjelenés a webes felületeken.</p>
+                            <div class="kartya-statisztikak">
+                                <div class="stat-elem">
+                                    <span class="stat-szam">15k+</span>
+                                    <span class="stat-cimke">Letöltés</span>
+                                </div>
+                                <div class="stat-elem">
+                                    <span class="stat-szam">98%</span>
+                                    <span class="stat-cimke">Elégedettség</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-light kartya-gomb">Kipróbálás</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline -->
+        <section class="mb-5">
+            <h2 class="text-center fw-bold mb-4">Interaktív Idővonal</h2>
+            <div class="idovonal-kontener">
+                <div class="idovonal">
+                    <!-- Időpont 1 -->
+                    <div class="idopont-elem">
+                        <div class="idopont-marker">
+                            <div class="marker-ikon">📅</div>
+                            <div class="marker-vonal"></div>
+                        </div>
+                        <div class="idopont-kartya">
+                            <div class="kartya-fejlec">
+                                <span class="datum">2024 Jan</span>
+                                <span class="cimke">Tervezés</span>
+                            </div>
+                            <h3 class="kartya-cim">Projekt Indítás</h3>
+                            <p class="kartya-szoveg">A projekt első fázisának elindítása és a csapat felállítása.</p>
+                            <div class="kartya-meta">
+                                <div class="resztvevok">
+                                    <img src="https://picsum.photos/24/24?random=11" alt="Tag">
+                                    <img src="https://picsum.photos/24/24?random=12" alt="Tag">
+                                    <span class="tobbi">+3</span>
+                                </div>
+                                <div class="statusz kesz">
+                                    <span class="statusz-ikon">✓</span>
+                                    <span class="statusz-szoveg">Befejezve</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Időpont 2 -->
+                    <div class="idopont-elem">
+                        <div class="idopont-marker">
+                            <div class="marker-ikon">🛠️</div>
+                            <div class="marker-vonal"></div>
+                        </div>
+                        <div class="idopont-kartya">
+                            <div class="kartya-fejlec">
+                                <span class="datum">2024 Feb</span>
+                                <span class="cimke">Fejlesztés</span>
+                            </div>
+                            <h3 class="kartya-cim">Fejlesztési Fázis</h3>
+                            <p class="kartya-szoveg">A fő funkciók fejlesztése és az első prototípusok elkészítése.</p>
+                            <div class="kartya-meta">
+                                <div class="resztvevok">
+                                    <img src="https://picsum.photos/24/24?random=13" alt="Tag">
+                                    <img src="https://picsum.photos/24/24?random=14" alt="Tag">
+                                    <span class="tobbi">+4</span>
+                                </div>
+                                <div class="statusz folyamatban">
+                                    <span class="statusz-ikon">⚡</span>
+                                    <span class="statusz-szoveg">Folyamatban</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Időpont 3 -->
+                    <div class="idopont-elem">
+                        <div class="idopont-marker">
+                            <div class="marker-ikon">🎯</div>
+                            <div class="marker-vonal"></div>
+                        </div>
+                        <div class="idopont-kartya">
+                            <div class="kartya-fejlec">
+                                <span class="datum">2024 Már</span>
+                                <span class="cimke">Tesztelés</span>
+                            </div>
+                            <h3 class="kartya-cim">Tesztelési Fázis</h3>
+                            <p class="kartya-szoveg">A fejlesztett funkciók tesztelése és finomhangolása.</p>
+                            <div class="kartya-meta">
+                                <div class="resztvevok">
+                                    <img src="https://picsum.photos/24/24?random=15" alt="Tag">
+                                    <img src="https://picsum.photos/24/24?random=16" alt="Tag">
+                                    <span class="tobbi">+2</span>
+                                </div>
+                                <div class="statusz kovi">
+                                    <span class="statusz-ikon">⏳</span>
+                                    <span class="statusz-szoveg">Következő</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Árazó táblák -->
+        <section class="mb-5">
+            <h2 class="text-center fw-bold mb-4">Árazási Tervek</h2>
+            <div class="row g-4 align-items-center">
+                <!-- Alap csomag -->
+                <div class="col-md-4">
+                    <div class="arak-kartya">
+                        <div class="kartya-fejlec">
+                            <div class="csomag-nev">
+                                <h3>Alap Csomag</h3>
+                                <span class="alcim">Kezdő vállalkozásoknak</span>
+                            </div>
+                            <div class="csomag-ar">
+                                <span class="penznem">Ft</span>
+                                <span class="osszeg">2.990</span>
+                                <span class="idoszak">/hó</span>
+                            </div>
+                        </div>
+                        <div class="kartya-test">
+                            <ul class="csomag-lista">
+                                <li class="lista-elem">
+                                    <span class="elem-ikon">✓</span>
+                                    <span class="elem-szoveg">5GB tárhely</span>
+                                </li>
+                                <li class="lista-elem">
+                                    <span class="elem-ikon">✓</span>
+                                    <span class="elem-szoveg">10 email fiók</span>
+                                </li>
+                                <li class="lista-elem">
+                                    <span class="elem-ikon">✓</span>
+                                    <span class="elem-szoveg">SSL biztonság</span>
+                                </li>
+                                <li class="lista-elem inaktiv">
+                                    <span class="elem-ikon">×</span>
+                                    <span class="elem-szoveg">Egyedi domain</span>
+                                </li>
+                                <li class="lista-elem inaktiv">
+                                    <span class="elem-ikon">×</span>
+                                    <span class="elem-szoveg">24/7 támogatás</span>
+                                </li>
+                            </ul>
+                            <div class="kartya-akcio">
+                                <button class="btn btn-outline-primary w-100">Választom</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Prémium csomag -->
+                <div class="col-md-4">
+                    <div class="arak-kartya kiemelt">
+                        <div class="kartya-kiemel">Legnépszerűbb</div>
+                        <div class="kartya-fejlec">
+                            <div class="csomag-nev">
+                                <h3>Prémium Csomag</h3>
+                                <span class="alcim">Növekvő vállalkozásoknak</span>
+                            </div>
+                            <div class="csomag-ar">
+                                <span class="penznem">Ft</span>
+                                <span class="osszeg">5.990</span>
+                                <span class="idoszak">/hó</span>
+                            </div>
+                        </div>
+                        <div class="kartya-test">
+                            <ul class="csomag-lista">
+                                <li class="lista-elem">
+                                    <span class="elem-ikon">✓</span>
+                                    <span class="elem-szoveg">50GB tárhely</span>
+                                </li>
+                                <li class="lista-elem">
+                                    <span class="elem-ikon">✓</span>
+                                    <span class="elem-szoveg">Korlátlan email</span>
+                                </li>
+                                <li class="lista-elem">
+                                    <span class="elem-ikon">✓</span>
+                                    <span class="elem-szoveg">SSL biztonság</span>
+                                </li>
+                                <li class="lista-elem">
+                                    <span class="elem-ikon">✓</span>
+                                    <span class="elem-szoveg">Egyedi domain</span>
+                                </li>
+                                <li class="lista-elem">
+                                    <span class="elem-ikon">✓</span>
+                                    <span class="elem-szoveg">24/7 támogatás</span>
+                                </li>
+                            </ul>
+                            <div class="kartya-akcio">
+                                <button class="btn btn-primary w-100">Választom</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pro csomag -->
+                <div class="col-md-4">
+                    <div class="arak-kartya">
+                        <div class="kartya-fejlec">
+                            <div class="csomag-nev">
+                                <h3>Pro Csomag</h3>
+                                <span class="alcim">Nagyvállalati megoldások</span>
+                            </div>
+                            <div class="csomag-ar">
+                                <span class="penznem">Ft</span>
+                                <span class="osszeg">9.990</span>
+                                <span class="idoszak">/hó</span>
+                            </div>
+                        </div>
+                        <div class="kartya-test">
+                            <ul class="csomag-lista">
+                                <li class="lista-elem">
+                                    <span class="elem-ikon">✓</span>
+                                    <span class="elem-szoveg">Korlátlan tárhely</span>
+                                </li>
+                                <li class="lista-elem">
+                                    <span class="elem-ikon">✓</span>
+                                    <span class="elem-szoveg">Dedikált szerver</span>
+                                </li>
+                                <li class="lista-elem">
+                                    <span class="elem-ikon">✓</span>
+                                    <span class="elem-szoveg">Prioritásos SSL</span>
+                                </li>
+                                <li class="lista-elem">
+                                    <span class="elem-ikon">✓</span>
+                                    <span class="elem-szoveg">VIP támogatás</span>
+                                </li>
+                                <li class="lista-elem">
+                                    <span class="elem-ikon">✓</span>
+                                    <span class="elem-szoveg">API hozzáférés</span>
+                                </li>
+                            </ul>
+                            <div class="kartya-akcio">
+                                <button class="btn btn-outline-primary w-100">Választom</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
+        <!-- Statisztikai kártyák -->
+        <section class="mb-5">
+            <h2 class="text-center fw-bold mb-4">Statisztikák</h2>
+            <div class="row g-4">
+                <!-- Alapstatisztika kártya -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="stat-kartya">
+                        <div class="stat-ikon novekedes">📈</div>
+                        <div class="stat-tartalom">
+                            <div class="stat-fejlec">
+                                <h4>Felhasználók</h4>
+                                <span class="valtozas novekedes">+12.5%</span>
+                            </div>
+                            <div class="stat-szamok">
+                                <span class="fo-szam">15,234</span>
+                                <span class="masod-szam">+1,256 ebben a hónapban</span>
+                            </div>
+                            <div class="mini-grafikon">
+                                <div class="grafikon-oszlop" style="height: 30%"></div>
+                                <div class="grafikon-oszlop" style="height: 45%"></div>
+                                <div class="grafikon-oszlop" style="height: 60%"></div>
+                                <div class="grafikon-oszlop" style="height: 75%"></div>
+                                <div class="grafikon-oszlop aktiv" style="height: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+ 
+                <!-- Kördiagram kártya -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="stat-kartya">
+                        <div class="stat-kordiagram">
+                            <svg viewBox="0 0 36 36" class="kordiagram">
+                                <path d="M18 2.0845
+                                    a 15.9155 15.9155 0 0 1 0 31.831
+                                    a 15.9155 15.9155 0 0 1 0 -31.831"
+                                    fill="none"
+                                    stroke="#eee"
+                                    stroke-width="3" />
+                                <path d="M18 2.0845
+                                    a 15.9155 15.9155 0 0 1 0 31.831
+                                    a 15.9155 15.9155 0 0 1 0 -31.831"
+                                    fill="none"
+                                    stroke="#3b82f6"
+                                    stroke-width="3"
+                                    stroke-dasharray="75, 100" />
+                            </svg>
+                            <div class="kordiagram-szoveg">
+                                <span class="szazalek">75%</span>
+                                <span class="cimke">Teljesítés</span>
+                            </div>
+                        </div>
+                        <div class="stat-tartalom">
+                            <h4>Projekt Haladás</h4>
+                            <div class="haladasi-info">
+                                <div class="info-elem">
+                                    <span class="cimke">Határidő</span>
+                                    <span class="ertek">2024.03.15</span>
+                                </div>
+                                <div class="info-elem">
+                                    <span class="cimke">Feladatok</span>
+                                    <span class="ertek">45/60</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+ 
+                <!-- Vonal diagram kártya -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="stat-kartya">
+                        <div class="stat-tartalom">
+                            <div class="stat-fejlec">
+                                <h4>Bevétel</h4>
+                                <select class="stat-idoszak">
+                                    <option>Heti</option>
+                                    <option selected>Havi</option>
+                                    <option>Éves</option>
+                                </select>
+                            </div>
+                            <div class="stat-szamok">
+                                <span class="fo-szam">125.4M Ft</span>
+                                <span class="masod-szam">+15.3% az előző időszakhoz képest</span>
+                            </div>
+                        </div>
+                        <div class="vonaldiagram">
+                            <canvas class="vonaldiagram-vaszon"></canvas>
+                            <div class="vonaldiagram-pontok">
+                                <div class="diagram-pont" style="left: 10%; bottom: 30%"></div>
+                                <div class="diagram-pont" style="left: 30%; bottom: 60%"></div>
+                                <div class="diagram-pont" style="left: 50%; bottom: 40%"></div>
+                                <div class="diagram-pont" style="left: 70%; bottom: 70%"></div>
+                                <div class="diagram-pont aktiv" style="left: 90%; bottom: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+ 
+                <!-- Összehasonlító kártya -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="stat-kartya">
+                        <div class="stat-tartalom">
+                            <div class="stat-fejlec">
+                                <h4>Terv vs Tény</h4>
+                                <span class="idoszak">2024 Q1</span>
+                            </div>
+                            <div class="osszehasonlitas">
+                                <div class="terv-oszlop">
+                                    <div class="oszlop-progress" style="height: 65%">
+                                        <span class="oszlop-ertek">85M</span>
+                                    </div>
+                                    <span class="oszlop-cimke">Terv</span>
+                                </div>
+                                <div class="teny-oszlop">
+                                    <div class="oszlop-progress" style="height: 85%">
+                                        <span class="oszlop-ertek">115M</span>
+                                    </div>
+                                    <span class="oszlop-cimke">Tény</span>
+                                </div>
+                            </div>
+                            <div class="kulonbseg novekedes">
+                                <span class="kulonbseg-ikon">↑</span>
+                                <span class="kulonbseg-szazalek">+35.3%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
+        <!-- Profilkártyák -->
+        <section class="mb-5">
+            <h2 class="text-center fw-bold mb-4">Profilkártyák</h2>
+            <div class="row g-4">
+                <!-- Modern profilkártya -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="profil-kartya modern">
+                        <div class="kartya-fejlec">
+                            <div class="hatter-minta"></div>
+                            <div class="profil-kep">
+                                <img src="https://picsum.photos/200/200?random=20" alt="Profil">
+                                <div class="profil-statusz online"></div>
+                            </div>
+                        </div>
+                        <div class="kartya-test">
+                            <div class="profil-info">
+                                <h3>Nagy János</h3>
+                                <span class="szakma">Vezető Fejlesztő</span>
+                                <div class="szakertelem">
+                                    <span class="badge">React</span>
+                                    <span class="badge">Node.js</span>
+                                    <span class="badge">UX/UI</span>
+                                </div>
+                            </div>
+                            <div class="profil-statisztika">
+                                <div class="stat-elem">
+                                    <span class="szam">142</span>
+                                    <span class="cimke">Projekt</span>
+                                </div>
+                                <div class="stat-elem">
+                                    <span class="szam">15k</span>
+                                    <span class="cimke">Követő</span>
+                                </div>
+                                <div class="stat-elem">
+                                    <span class="szam">98%</span>
+                                    <span class="cimke">Értékelés</span>
+                                </div>
+                            </div>
+                            <div class="profil-gombok">
+                                <button class="btn btn-primary w-100">Kapcsolatfelvétel</button>
+                                <button class="btn btn-outline-primary w-100">Profil megtekintése</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+ 
+                <!-- Csapattag profilkártya -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="profil-kartya csapattag">
+                        <div class="kartya-fejlec">
+                            <div class="fejlec-ikonok">
+                                <span class="szerep-ikon">👑</span>
+                                <span class="aktiv-statusz"></span>
+                            </div>
+                            <div class="profil-kep">
+                                <img src="https://picsum.photos/200/200?random=21" alt="Profil">
+                            </div>
+                            <div class="profil-alapinfo">
+                                <h3>Kiss Éva</h3>
+                                <span class="szerep">UX Designer</span>
+                            </div>
+                        </div>
+                        <div class="kartya-test">
+                            <div class="szakteruletek">
+                                <span class="szakterulet">UI Design</span>
+                                <span class="szakterulet">Wireframing</span>
+                                <span class="szakterulet">Prototyping</span>
+                            </div>
+                            <div class="projekt-info">
+                                <div class="info-blokk">
+                                    <span class="cimke">Aktuális projekt</span>
+                                    <span class="ertek">Webshop Redesign</span>
+                                </div>
+                                <div class="info-blokk">
+                                    <span class="cimke">Határidő</span>
+                                    <span class="ertek">2024.03.15</span>
+                                </div>
+                                <div class="haladasi-sav">
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 75%"></div>
+                                    </div>
+                                    <span class="haladasi-szoveg">75% kész</span>
+                                </div>
+                            </div>
+                            <div class="csapat-tagok">
+                                <div class="tagok-lista">
+                                    <img src="https://picsum.photos/32/32?random=22" alt="Tag">
+                                    <img src="https://picsum.photos/32/32?random=23" alt="Tag">
+                                    <img src="https://picsum.photos/32/32?random=24" alt="Tag">
+                                    <span class="tobbi">+2</span>
+                                </div>
+                                <button class="btn btn-outline-primary btn-sm">Üzenet</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+ 
+                <!-- Kreatív profilkártya -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="profil-kartya kreativ">
+                        <div class="kartya-hatter">
+                            <div class="hatter-kep" style="background-image: url('https://picsum.photos/800/400?random=25')"></div>
+                            <div class="hatter-szuro"></div>
+                        </div>
+                        <div class="kartya-tartalom">
+                            <div class="profil-kep">
+                                <img src="https://picsum.photos/200/200?random=26" alt="Profil">
+                            </div>
+                            <div class="profil-info">
+                                <h3>Szabó Péter</h3>
+                                <span class="foglalkozas">Kreatív Művész</span>
+                                <p class="bio">Szenvedélyes grafikus és digitális művész, aki szereti a kihívásokat.</p>
+                            </div>
+                            <div class="portfolio-adatok">
+                                <div class="adat">
+                                    <span class="szam">256</span>
+                                    <span class="cimke">Projekt</span>
+                                </div>
+                                <div class="adat">
+                                    <span class="szam">4.9</span>
+                                    <span class="cimke">Értékelés</span>
+                                </div>
+                                <div class="adat">
+                                    <span class="szam">12k</span>
+                                    <span class="cimke">Követő</span>
+                                </div>
+                            </div>
+                            <div class="social-linkek">
+                                <a href="#" class="social-link">🎨</a>
+                                <a href="#" class="social-link">📸</a>
+                                <a href="#" class="social-link">🌐</a>
+                               <a href="#" class="social-link">📧</a>
+                           </div>
+                           <div class="akcio-gombok">
+                               <button class="btn btn-light">Portfólió</button>
+                               <button class="btn btn-primary">Kapcsolat</button>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+
+               <!-- Dashboard profilkártya -->
+               <div class="col-md-6 col-lg-3">
+                   <div class="profil-kartya dashboard">
+                       <div class="kartya-fejlec">
+                           <div class="profil-info">
+                               <div class="profil-kep">
+                                   <img src="https://picsum.photos/200/200?random=27" alt="Profil">
+                                   <span class="aktivitas aktiv"></span>
+                               </div>
+                               <div class="alapadatok">
+                                   <h3>Kovács Anna</h3>
+                                   <span class="pozicio">Értékesítési Vezető</span>
+                               </div>
+                           </div>
+                           <div class="negyedeves-cel">
+                               <span class="cel-cimke">Q1 Célok</span>
+                               <div class="progress">
+                                   <div class="progress-bar" role="progressbar" style="width: 85%"></div>
+                               </div>
+                               <span class="cel-szazalek">85%</span>
+                           </div>
+                       </div>
+                       <div class="kartya-test">
+                           <div class="teljesitmeny-adatok">
+                               <div class="teljesitmeny-elem">
+                                   <span class="szam">156</span>
+                                   <span class="cimke">Ajánlat</span>
+                                   <span class="valtozas novekvo">+23%</span>
+                               </div>
+                               <div class="teljesitmeny-elem">
+                                   <span class="szam">89</span>
+                                   <span class="cimke">Lezárt</span>
+                                   <span class="valtozas novekvo">+8%</span>
+                               </div>
+                               <div class="teljesitmeny-elem">
+                                   <span class="szam">92%</span>
+                                   <span class="cimke">Elérés</span>
+                                   <span class="valtozas novekvo">+12%</span>
+                               </div>
+                           </div>
+                           <div class="aktivitas-naptar">
+                               <div class="naptar-fejlec">
+                                   <h4>Aktivitás</h4>
+                                   <span class="idoszak">Utolsó 7 nap</span>
+                               </div>
+                               <div class="naptar-grid">
+                                   <div class="nap aktiv" data-aktivitas="8"></div>
+                                   <div class="nap" data-aktivitas="5"></div>
+                                   <div class="nap aktiv" data-aktivitas="12"></div>
+                                   <div class="nap" data-aktivitas="3"></div>
+                                   <div class="nap aktiv" data-aktivitas="7"></div>
+                                   <div class="nap" data-aktivitas="4"></div>
+                                   <div class="nap aktiv" data-aktivitas="9"></div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </section>
+   </div>
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

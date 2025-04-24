@@ -1,0 +1,28 @@
+/* Alap stílusok az első modulhoz */
+body {
+    background-color: #f8f9fa;
+}
+
+/* Demonstrációs doboz stílusa */
+.demo-doboz {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+/* Grid elemek stílusa */
+.grid-elem {
+    background-color: #e9ecef;
+    border: 1px solid #dee2e6;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* Színek és tipográfia bemutatóhoz */
+[class*="bg-"] {
+    border-radius: 5px;
+    text-align: center;
+}

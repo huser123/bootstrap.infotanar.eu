@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Navigáció</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="modul-2.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Egyszerű navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
+        <div class="container">
+            <a class="navbar-brand" href="#">Egyszerű Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarBasic">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarBasic">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Főoldal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Rólunk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Kapcsolat</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Színes navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-5">
+        <div class="container">
+            <a class="navbar-brand" href="#">Színes Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColored">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColored">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Főoldal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Termékek</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Szolgáltatások</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Keresés...">
+                    <button class="btn btn-outline-light" type="submit">Keresés</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Üveghatású navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark uveg-navbar sticky-top mb-5">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Üveg Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarGlass">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarGlass">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Főoldal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Rólunk</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            Szolgáltatások
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Szolgáltatás 1</a></li>
+                            <li><a class="dropdown-item" href="#">Szolgáltatás 2</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Egyéb</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Kapcsolat</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <button class="btn btn-outline-light me-2">Bejelentkezés</button>
+                    <button class="btn btn-light">Regisztráció</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero szekció alapvető -->
+    <header class="hero-alap text-center text-white py-5 mb-5">
+        <div class="container py-5">
+            <h1 class="display-4 fw-bold mb-3">Egyszerű Hero Szekció</h1>
+            <p class="lead mb-4">Ez egy egyszerű hero szekció, alapvető háttérszínnel és szöveggel.</p>
+            <button class="btn btn-light btn-lg">További információ</button>
+        </div>
+    </header>
+
+    <!-- Hero szekció háttérképpel -->
+    <header class="hero-kepes text-center text-white py-5 mb-5">
+        <div class="container py-5">
+            <h1 class="display-3 fw-bold mb-3">Háttérképes Hero</h1>
+            <p class="lead mb-4">Ez egy háttérképes hero szekció, sötétítő réteggel és középre igazított tartalommal.</p>
+            <div class="d-flex justify-content-center gap-3">
+                <button class="btn btn-primary btn-lg">Kezdjük el</button>
+                <button class="btn btn-outline-light btn-lg">Tudj meg többet</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Modern hero szekció -->
+    <header class="hero-modern min-vh-100 d-flex align-items-center text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-2 fw-bold mb-4">Modern Hero Dizájn</h1>
+                    <p class="lead mb-5">Ez egy modern hero szekció gradiens háttérrel, lebegő elemekkel és egyedi dizájnnal.</p>
+                    <div class="d-flex gap-3">
+                        <button class="btn btn-light btn-lg px-4">Kezdj bele</button>
+                        <button class="btn btn-outline-light btn-lg px-4">Részletek</button>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://picsum.photos/600/400" alt="Hero kép" class="img-fluid rounded-3 shadow-lg">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

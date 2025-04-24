@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap CSS-only Interakciók</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="modul-10.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Fejléc -->
+    <header class="interakcio-fejlec py-5 mb-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h1 class="display-4 fw-bold text-white mb-3">CSS-only Interakciók</h1>
+                    <p class="lead text-white-50 mb-0">JavaScript nélküli interaktív komponensek</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- CSS-only Dropdown -->
+        <section class="mb-5">
+            <h2 class="text-center fw-bold mb-4">Legördülő menük</h2>
+            
+            <!-- Alap dropdown -->
+            <div class="demo-blokk mb-4">
+                <h3 class="h5 mb-3">Alap legördülő</h3>
+                <div class="css-dropdown">
+                    <input type="checkbox" id="dropdown1" class="dropdown-input">
+                    <label for="dropdown1" class="dropdown-gomb">
+                        <span>Legördülő menü</span>
+                        <span class="legordulo-ikon">▼</span>
+                    </label>
+                    <div class="dropdown-tartalom">
+                        <ul class="dropdown-lista">
+                            <li><a href="#">Menüpont 1</a></li>
+                            <li><a href="#">Menüpont 2</a></li>
+                            <li><a href="#">Menüpont 3</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Többszintű dropdown -->
+            <div class="demo-blokk mb-4">
+                <h3 class="h5 mb-3">Többszintű legördülő</h3>
+                <nav class="tobbszintu-nav">
+                    <ul class="nav-lista">
+                        <li class="nav-elem">
+                            <input type="checkbox" id="menu1" class="menu-input">
+                            <label for="menu1" class="menu-gomb">
+                                <span>Főmenü 1</span>
+                                <span class="legordulo-ikon">▼</span>
+                            </label>
+                            <ul class="almenu-lista">
+                                <li>
+                                    <input type="checkbox" id="submenu1" class="menu-input">
+                                    <label for="submenu1" class="menu-gomb">
+                                        <span>Almenü 1</span>
+                                        <span class="legordulo-ikon">▶</span>
+                                    </label>
+                                    <ul class="almenu-lista masodik-szint">
+                                        <li><a href="#">Menüpont 1.1</a></li>
+                                        <li><a href="#">Menüpont 1.2</a></li>
+                                        <li><a href="#">Menüpont 1.3</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Menüpont 2</a></li>
+                                <li><a href="#">Menüpont 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-elem">
+                            <input type="checkbox" id="menu2" class="menu-input">
+                            <label for="menu2" class="menu-gomb">
+                                <span>Főmenü 2</span>
+                                <span class="legordulo-ikon">▼</span>
+                            </label>
+                            <ul class="almenu-lista">
+                                <li><a href="#">Menüpont 1</a></li>
+                                <li><a href="#">Menüpont 2</a></li>
+                                <li>
+                                    <input type="checkbox" id="submenu2" class="menu-input">
+                                    <label for="submenu2" class="menu-gomb">
+                                        <span>Almenü 2</span>
+                                        <span class="legordulo-ikon">▶</span>
+                                    </label>
+                                    <ul class="almenu-lista masodik-szint">
+                                        <li><a href="#">Menüpont 2.1</a></li>
+                                        <li><a href="#">Menüpont 2.2</a></li>
+                                        <li><a href="#">Menüpont 2.3</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Megacookie dropdown -->
+            <div class="demo-blokk">
+                <h3 class="h5 mb-3">Megacookie menü</h3>
+                <div class="mega-nav">
+                    <ul class="mega-lista">
+                        <li class="mega-elem">
+                            <input type="checkbox" id="mega1" class="mega-input">
+                            <label for="mega1" class="mega-gomb">
+                                <span>Termékek</span>
+                                <span class="legordulo-ikon">▼</span>
+                            </label>
+                            <div class="mega-panel">
+                                <div class="panel-grid">
+                                    <div class="panel-oszlop">
+                                        <h4>Kategóriák</h4>
+                                        <ul>
+                                            <li><a href="#">Elektronika</a></li>
+                                            <li><a href="#">Ruházat</a></li>
+                                            <li><a href="#">Könyvek</a></li>
+                                            <li><a href="#">Sport</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="panel-oszlop">
+                                        <h4>Márkák</h4>
+                                        <ul>
+                                            <li><a href="#">Apple</a></li>
+                                            <li><a href="#">Samsung</a></li>
+                                            <li><a href="#">Nike</a></li>
+                                            <li><a href="#">Adidas</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="panel-oszlop">
+                                        <div class="kiemelt-termek">
+                                            <img src="https://picsum.photos/300/200?random=1" alt="Kiemelt termék">
+                                            <h5>Új termékek</h5>
+                                            <p>Fedezze fel legújabb termékeinket!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="mega-elem">
+                            <input type="checkbox" id="mega2" class="mega-input">
+                            <label for="mega2" class="mega-gomb">
+                                <span>Szolgáltatások</span>
+                                <span class="legordulo-ikon">▼</span>
+                            </label>
+                            <div class="mega-panel">
+                                <div class="panel-grid">
+                                    <div class="panel-oszlop">
+                                        <h4>Üzleti</h4>
+                                        <ul>
+                                            <li><a href="#">Tanácsadás</a></li>
+                                            <li><a href="#">Marketing</a></li>
+                                            <li><a href="#">Fejlesztés</a></li>
+                                            <li><a href="#">Tervezés</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="panel-oszlop">
+                                        <h4>Magán</h4>
+                                        <ul>
+                                            <li><a href="#">Coaching</a></li>
+                                            <li><a href="#">Oktatás</a></li>
+                                            <li><a href="#">Tréning</a></li>
+                                            <li><a href="#">Támogatás</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="panel-oszlop">
+                                        <div class="szolgaltatas-promo">
+                                            <div class="promo-ikon">🚀</div>
+                                            <h5>Prémium csomag</h5>
+                                            <p>Minden egy csomagban</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CSS-only Accordion -->
+        <section class="mb-5">
+            <h2 class="text-center fw-bold mb-4">Harmonika menük</h2>
+
+            <!-- Alap accordion -->
+            <div class="demo-blokk mb-4">
+                <h3 class="h5 mb-3">Alap harmonika</h3>
+                <div class="css-accordion">
+                    <!-- Accordion elem 1 -->
+                    <div class="accordion-elem">
+                        <input type="radio" name="accordion1" id="acc1" class="accordion-input" checked>
+                        <label for="acc1" class="accordion-fejlec">
+                            <span class="fejlec-cim">Első elem</span>
+                            <span class="accordion-ikon"></span>
+                        </label>
+                        <div class="accordion-tartalom">
+                            <div class="tartalom-belso">
+                                <p>Az első elem tartalma. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                   Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion elem 2 -->
+                    <div class="accordion-elem">
+                        <input type="radio" name="accordion1" id="acc2" class="accordion-input">
+                        <label for="acc2" class="accordion-fejlec">
+                            <span class="fejlec-cim">Második elem</span>
+                            <span class="accordion-ikon"></span>
+                        </label>
+                        <div class="accordion-tartalom">
+                            <div class="tartalom-belso">
+                                <p>A második elem tartalma. Ut enim ad minim veniam, quis nostrud exercitation 
+                                   ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion elem 3 -->
+                    <div class="accordion-elem">
+                        <input type="radio" name="accordion1" id="acc3" class="accordion-input">
+                        <label for="acc3" class="accordion-fejlec">
+                            <span class="fejlec-cim">Harmadik elem</span>
+                            <span class="accordion-ikon"></span>
+                        </label>
+                        <div class="accordion-tartalom">
+                            <div class="tartalom-belso">
+                                <p>A harmadik elem tartalma. Duis aute irure dolor in reprehenderit in voluptate 
+                                   velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ikonos accordion -->
+            <div class="demo-blokk mb-4">
+                <h3 class="h5 mb-3">Ikonos harmonika</h3>
+                <div class="css-accordion ikonos">
+                    <!-- Accordion elem 1 -->
+                    <div class="accordion-elem">
+                        <input type="radio" name="accordion2" id="acc4" class="accordion-input" checked>
+                        <label for="acc4" class="accordion-fejlec">
+                            <span class="fejlec-ikon">📱</span>
+                            <span class="fejlec-szoveg">
+                                <span class="fejlec-cim">Reszponzív design</span>
+                                <span class="fejlec-leiras">Mobilbarát megoldások</span>
+                            </span>
+                            <span class="accordion-ikon"></span>
+                        </label>
+                        <div class="accordion-tartalom">
+                            <div class="tartalom-belso">
+                                <p>Mobilbarát és reszponzív megoldások minden eszközre. A tartalom automatikusan
+                                   igazodik a különböző képernyőméretekhez.</p>
+                                <ul>
+                                    <li>Mobile-first megközelítés</li>
+                                    <li>Rugalmas grid rendszer</li>
+                                    <li>Automatikus méretezés</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion elem 2 -->
+                    <div class="accordion-elem">
+                        <input type="radio" name="accordion2" id="acc5" class="accordion-input">
+                        <label for="acc5" class="accordion-fejlec">
+                            <span class="fejlec-ikon">🎨</span>
+                            <span class="fejlec-szoveg">
+                                <span class="fejlec-cim">Modern design</span>
+                                <span class="fejlec-leiras">Trendkövető megjelenés</span>
+                            </span>
+                            <span class="accordion-ikon"></span>
+                        </label>
+                        <div class="accordion-tartalom">
+                            <div class="tartalom-belso">
+                                <p>Modern és letisztult dizájn elemek használata. A legújabb trendeket követő
+                                   megjelenés és felhasználói élmény.</p>
+                                <ul>
+                                    <li>Minimalista design</li>
+                                    <li>Modern színvilág</li>
+                                    <li>Elegáns tipográfia</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion elem 3 -->
+                    <div class="accordion-elem">
+                        <input type="radio" name="accordion2" id="acc6" class="accordion-input">
+                        <label for="acc6" class="accordion-fejlec">
+                            <span class="fejlec-ikon">⚡</span>
+                           <span class="fejlec-szoveg">
+                               <span class="fejlec-cim">Optimalizált teljesítmény</span>
+                               <span class="fejlec-leiras">Gyors betöltődés</span>
+                           </span>
+                           <span class="accordion-ikon"></span>
+                       </label>
+                       <div class="accordion-tartalom">
+                           <div class="tartalom-belso">
+                               <p>Optimalizált kód és erőforrások a gyors betöltődés érdekében. 
+                                  Teljesítményre optimalizált megoldások.</p>
+                               <ul>
+                                   <li>Gyors betöltési idő</li>
+                                   <li>Optimalizált erőforrások</li>
+                                   <li>Hatékony kódstruktúra</li>
+                               </ul>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+
+           <!-- Kártyás accordion -->
+           <div class="demo-blokk">
+               <h3 class="h5 mb-3">Kártyás harmonika</h3>
+               <div class="css-accordion kartyak">
+                   <!-- Accordion elem 1 -->
+                   <div class="accordion-elem">
+                       <input type="radio" name="accordion3" id="acc7" class="accordion-input" checked>
+                       <label for="acc7" class="accordion-fejlec">
+                           <div class="kartya-info">
+                               <img src="https://picsum.photos/50/50?random=2" alt="Profil" class="kartya-kep">
+                               <div class="kartya-szoveg">
+                                   <span class="kartya-nev">Nagy János</span>
+                                   <span class="kartya-pozicio">Vezető Fejlesztő</span>
+                               </div>
+                           </div>
+                           <span class="accordion-ikon"></span>
+                       </label>
+                       <div class="accordion-tartalom">
+                           <div class="tartalom-belso">
+                               <div class="kartya-reszletek">
+                                   <div class="reszlet-elem">
+                                       <span class="reszlet-cimke">Email:</span>
+                                       <span class="reszlet-ertek">nagy.janos@email.com</span>
+                                   </div>
+                                   <div class="reszlet-elem">
+                                       <span class="reszlet-cimke">Projektek:</span>
+                                       <span class="reszlet-ertek">24 aktív projekt</span>
+                                   </div>
+                                   <div class="reszlet-elem">
+                                       <span class="reszlet-cimke">Szakterület:</span>
+                                       <div class="szakertelem-lista">
+                                           <span class="szakertelem">React</span>
+                                           <span class="szakertelem">Node.js</span>
+                                           <span class="szakertelem">TypeScript</span>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+
+                   <!-- Accordion elem 2 -->
+                   <div class="accordion-elem">
+                       <input type="radio" name="accordion3" id="acc8" class="accordion-input">
+                       <label for="acc8" class="accordion-fejlec">
+                           <div class="kartya-info">
+                               <img src="https://picsum.photos/50/50?random=3" alt="Profil" class="kartya-kep">
+                               <div class="kartya-szoveg">
+                                   <span class="kartya-nev">Kiss Éva</span>
+                                   <span class="kartya-pozicio">UX Designer</span>
+                               </div>
+                           </div>
+                           <span class="accordion-ikon"></span>
+                       </label>
+                       <div class="accordion-tartalom">
+                           <div class="tartalom-belso">
+                               <div class="kartya-reszletek">
+                                   <div class="reszlet-elem">
+                                       <span class="reszlet-cimke">Email:</span>
+                                       <span class="reszlet-ertek">kiss.eva@email.com</span>
+                                   </div>
+                                   <div class="reszlet-elem">
+                                       <span class="reszlet-cimke">Projektek:</span>
+                                       <span class="reszlet-ertek">12 aktív projekt</span>
+                                   </div>
+                                   <div class="reszlet-elem">
+                                       <span class="reszlet-cimke">Szakterület:</span>
+                                       <div class="szakertelem-lista">
+                                           <span class="szakertelem">UI Design</span>
+                                           <span class="szakertelem">Figma</span>
+                                           <span class="szakertelem">UX Research</span>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+
+                   <!-- Accordion elem 3 -->
+                   <div class="accordion-elem">
+                       <input type="radio" name="accordion3" id="acc9" class="accordion-input">
+                       <label for="acc9" class="accordion-fejlec">
+                           <div class="kartya-info">
+                               <img src="https://picsum.photos/50/50?random=4" alt="Profil" class="kartya-kep">
+                               <div class="kartya-szoveg">
+                                   <span class="kartya-nev">Kovács Péter</span>
+                                   <span class="kartya-pozicio">Frontend Fejlesztő</span>
+                               </div>
+                           </div>
+                           <span class="accordion-ikon"></span>
+                       </label>
+                       <div class="accordion-tartalom">
+                           <div class="tartalom-belso">
+                               <div class="kartya-reszletek">
+                                   <div class="reszlet-elem">
+                                       <span class="reszlet-cimke">Email:</span>
+                                       <span class="reszlet-ertek">kovacs.peter@email.com</span>
+                                   </div>
+                                   <div class="reszlet-elem">
+                                       <span class="reszlet-cimke">Projektek:</span>
+                                       <span class="reszlet-ertek">18 aktív projekt</span>
+                                   </div>
+                                   <div class="reszlet-elem">
+                                       <span class="reszlet-cimke">Szakterület:</span>
+                                       <div class="szakertelem-lista">
+                                           <span class="szakertelem">Vue.js</span>
+                                           <span class="szakertelem">CSS3</span>
+                                           <span class="szakertelem">JavaScript</span>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </section>
+
+       <!-- CSS-only Tabs -->
+       <section class="mb-5">
+           <h2 class="text-center fw-bold mb-4">Lapfülek</h2>
+
+           <!-- Alap tabs -->
+           <div class="demo-blokk mb-4">
+               <h3 class="h5 mb-3">Alap lapfülek</h3>
+               <div class="css-tabs">
+                   <input type="radio" name="tabs1" id="tab1" class="tab-input" checked>
+                   <input type="radio" name="tabs1" id="tab2" class="tab-input">
+                   <input type="radio" name="tabs1" id="tab3" class="tab-input">
+                   
+                   <div class="tab-fejlec">
+                       <label for="tab1" class="tab-cimke">Első fül</label>
+                       <label for="tab2" class="tab-cimke">Második fül</label>
+                       <label for="tab3" class="tab-cimke">Harmadik fül</label>
+                   </div>
+
+                   <div class="tab-tartalom">
+                       <div class="tab-panel">
+                           <h4>Első fül tartalma</h4>
+                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod 
+                              tempor incididunt ut labore et dolore magna aliqua.</p>
+                       </div>
+                       <div class="tab-panel">
+                           <h4>Második fül tartalma</h4>
+                           <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                              nisi ut aliquip ex ea commodo consequat.</p>
+                       </div>
+                       <div class="tab-panel">
+                           <h4>Harmadik fül tartalma</h4>
+                           <p>Duis aute irure dolor in reprehenderit in voluptate velit esse 
+                              cillum dolore eu fugiat nulla pariatur.</p>
+                       </div>
+                   </div>
+               </div>
+           </div>
+
+           <!-- Ikonos tabs -->
+           <div class="demo-blokk mb-4">
+               <h3 class="h5 mb-3">Ikonos lapfülek</h3>
+               <div class="css-tabs ikonos-tabs">
+                   <input type="radio" name="tabs2" id="tab4" class="tab-input" checked>
+                   <input type="radio" name="tabs2" id="tab5" class="tab-input">
+                   <input type="radio" name="tabs2" id="tab6" class="tab-input">
+                   
+                   <div class="tab-fejlec">
+                       <label for="tab4" class="tab-cimke">
+                           <span class="tab-ikon">📊</span>
+                           <span class="tab-szoveg">Statisztikák</span>
+                       </label>
+                       <label for="tab5" class="tab-cimke">
+                           <span class="tab-ikon">📅</span>
+                           <span class="tab-szoveg">Naptár</span>
+                       </label>
+                       <label for="tab6" class="tab-cimke">
+                           <span class="tab-ikon">⚙️</span>
+                           <span class="tab-szoveg">Beállítások</span>
+                       </label>
+                   </div>
+
+                   <div class="tab-tartalom">
+                       <div class="tab-panel">
+                           <div class="statisztika-grid">
+                               <div class="stat-kartya">
+                                   <span class="stat-szam">2,450</span>
+                                   <span class="stat-cimke">Felhasználók</span>
+                                   <span class="stat-valtozas novekedes">+12.5%</span>
+                               </div>
+                               <div class="stat-kartya">
+                                   <span class="stat-szam">1,875</span>
+                                   <span class="stat-cimke">Rendelések</span>
+                                   <span class="stat-valtozas novekedes">+8.3%</span>
+                               </div>
+                               <div class="stat-kartya">
+                                   <span class="stat-szam">€12.5k</span>
+                                   <span class="stat-cimke">Bevétel</span>
+                                   <span class="stat-valtozas csokkenes">-2.7%</span>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="tab-panel">
+                           <div class="naptar-nezet">
+                               <div class="naptar-fejlec">
+                                   <span>Hétfő</span>
+                                   <span>Kedd</span>
+                                   <span>Szerda</span>
+                                   <span>Csütörtök</span>
+                                   <span>Péntek</span>
+                                   <span>Szombat</span>
+                                   <span>Vasárnap</span>
+                               </div>
+                               <div class="naptar-grid">
+                                   <div class="nap">1</div>
+                                   <div class="nap">2</div>
+                                   <div class="nap">3</div>
+                                   <div class="nap aktiv">4</div>
+                                   <div class="nap">5</div>
+                                   <div class="nap">6</div>
+                                   <div class="nap">7</div>
+                                   <!-- További napok... -->
+                               </div>
+                           </div>
+                       </div>
+                       <div class="tab-panel">
+                           <div class="beallitasok-lista">
+                               <div class="beallitas-elem">
+                                   <div class="beallitas-info">
+                                       <span class="beallitas-nev">Értesítések</span>
+                                       <span class="beallitas-leiras">Email és push értesítések kezelése</span>
+                                   </div>
+                                   <label class="kapcsolo">
+                                       <input type="checkbox" checked>
+                                       <span class="csuszka"></span>
+                                   </label>
+                               </div>
+                               <div class="beallitas-elem">
+                                   <div class="beallitas-info">
+                                       <span class="beallitas-nev">Sötét mód</span>
+                                       <span class="beallitas-leiras">Sötét téma bekapcsolása</span>
+                                   </div>
+                                   <label class="kapcsolo">
+                                       <input type="checkbox">
+                                       <span class="csuszka"></span>
+                                   </label>
+                               </div>
+                               <div class="beallitas-elem">
+                                   <div class="beallitas-info">
+                                       <span class="beallitas-nev">Adatvédelem</span>
+                                       <span class="beallitas-leiras">Adatvédelmi beállítások kezelése</span>
+                                   </div>
+                                   <label class="kapcsolo">
+                                       <input type="checkbox" checked>
+                                       <span class="csuszka"></span>
+                                   </label>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+
+           <!-- Kártyás tabs -->
+           <div class="demo-blokk">
+               <h3 class="h5 mb-3">Kártyás lapfülek</h3>
+               <div class="css-tabs kartyak-tabs">
+                   <input type="radio" name="tabs3" id="tab7" class="tab-input" checked>
+                   <input type="radio" name="tabs3" id="tab8" class="tab-input">
+                   <input type="radio" name="tabs3" id="tab9" class="tab-input">
+                   
+                   <div class="tab-fejlec">
+                       <label for="tab7" class="tab-cimke">
+                           <div class="kartya-miniatur">
+                               <img src="https://picsum.photos/100/60?random=5" alt="Termék">
+                               <div class="kartya-info">
+                                <span class="kartya-nev">Alapcsomag</span>
+                                <span class="kartya-ar">2.990 Ft</span>
+                            </div>
+                        </div>
+                    </label>
+                    <label for="tab8" class="tab-cimke">
+                        <div class="kartya-miniatur">
+                            <img src="https://picsum.photos/100/60?random=6" alt="Termék">
+                            <div class="kartya-info">
+                                <span class="kartya-nev">Pro csomag</span>
+                                <span class="kartya-ar">5.990 Ft</span>
+                            </div>
+                        </div>
+                    </label>
+                    <label for="tab9" class="tab-cimke">
+                        <div class="kartya-miniatur">
+                            <img src="https://picsum.photos/100/60?random=7" alt="Termék">
+                            <div class="kartya-info">
+                                <span class="kartya-nev">VIP csomag</span>
+                                <span class="kartya-ar">9.990 Ft</span>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="tab-tartalom">
+                    <div class="tab-panel">
+                        <div class="csomag-reszletek">
+                            <div class="csomag-fejlec">
+                                <h4>Alapcsomag</h4>
+                                <p>Ideális kezdőknek</p>
+                            </div>
+                            <ul class="csomag-lista">
+                                <li>5GB tárhely</li>
+                                <li>10 email fiók</li>
+                                <li>Korlátozott sávszélesség</li>
+                                <li>Alapszintű támogatás</li>
+                            </ul>
+                            <button class="btn btn-primary w-100">Választom</button>
+                        </div>
+                    </div>
+                    <div class="tab-panel">
+                        <div class="csomag-reszletek">
+                            <div class="csomag-fejlec">
+                                <h4>Pro csomag</h4>
+                                <p>Haladó funkciókkal</p>
+                            </div>
+                            <ul class="csomag-lista">
+                                <li>50GB tárhely</li>
+                                <li>Korlátlan email</li>
+                                <li>Gyors sávszélesség</li>
+                                <li>Kiemelt támogatás</li>
+                            </ul>
+                            <button class="btn btn-primary w-100">Választom</button>
+                        </div>
+                    </div>
+                    <div class="tab-panel">
+                        <div class="csomag-reszletek">
+                            <div class="csomag-fejlec">
+                                <h4>VIP csomag</h4>
+                                <p>Professzionális felhasználóknak</p>
+                            </div>
+                            <ul class="csomag-lista">
+                                <li>Korlátlan tárhely</li>
+                                <li>Dedikált szerver</li>
+                                <li>Prémium sávszélesség</li>
+                                <li>24/7 támogatás</li>
+                            </ul>
+                            <button class="btn btn-primary w-100">Választom</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CSS-only Tooltip -->
+    <section class="mb-5">
+        <h2 class="text-center fw-bold mb-4">Elemleírások</h2>
+
+        <!-- Alap tooltip -->
+        <div class="demo-blokk mb-4">
+            <h3 class="h5 mb-3">Alap elemleírások</h3>
+            <div class="tooltip-demo">
+                <button class="btn btn-primary me-3" data-tooltip="Felfelé megjelenő leírás" data-tooltip-pozicio="fent">
+                    Felfelé
+                </button>
+                <button class="btn btn-primary me-3" data-tooltip="Jobbra megjelenő leírás" data-tooltip-pozicio="jobb">
+                    Jobbra
+                </button>
+                <button class="btn btn-primary me-3" data-tooltip="Lefelé megjelenő leírás" data-tooltip-pozicio="lent">
+                    Lefelé
+                </button>
+                <button class="btn btn-primary" data-tooltip="Balra megjelenő leírás" data-tooltip-pozicio="bal">
+                    Balra
+                </button>
+            </div>
+        </div>
+
+        <!-- HTML tartalommal -->
+        <div class="demo-blokk mb-4">
+            <h3 class="h5 mb-3">HTML tartalommal</h3>
+            <div class="tooltip-demo">
+                <button class="btn btn-success me-3" data-tooltip-html="<strong>Sikeres</strong> művelet" data-tooltip-pozicio="fent">
+                    HTML tooltip
+                </button>
+                <button class="btn btn-danger me-3" data-tooltip-html="<strong>Hiba</strong> történt" data-tooltip-pozicio="fent">
+                    HTML tooltip
+                </button>
+            </div>
+        </div>
+
+        <!-- Interaktív tooltipek -->
+        <div class="demo-blokk">
+            <h3 class="h5 mb-3">Interaktív elemleírások</h3>
+            <div class="tooltip-demo">
+                <div class="interaktiv-tooltip">
+                    <button class="btn btn-outline-primary">
+                        Felhasználó
+                    </button>
+                    <div class="tooltip-panel">
+                        <div class="felhasznalo-kartya">
+                            <img src="https://picsum.photos/60/60?random=8" alt="Profil" class="felhasznalo-kep">
+                            <div class="felhasznalo-info">
+                                <h5>Nagy János</h5>
+                                <p>Vezető Fejlesztő</p>
+                                <button class="btn btn-sm btn-primary">Profil megtekintése</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="interaktiv-tooltip">
+                    <button class="btn btn-outline-primary ms-3">
+                        Értesítések
+                    </button>
+                    <div class="tooltip-panel">
+                        <div class="ertesites-lista">
+                            <div class="ertesites-elem">
+                                <div class="ertesites-ikon">📩</div>
+                                <div class="ertesites-tartalom">
+                                    <p>Új üzenet érkezett</p>
+                                    <span>10 perce</span>
+                                </div>
+                            </div>
+                            <div class="ertesites-elem">
+                                <div class="ertesites-ikon">🔔</div>
+                                <div class="ertesites-tartalom">
+                                    <p>Rendszerfrissítés</p>
+                                    <span>2 órája</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CSS-only Lightbox -->
+    <section class="mb-5">
+        <h2 class="text-center fw-bold mb-4">Lightbox Galéria</h2>
+
+        <!-- Alap lightbox -->
+        <div class="demo-blokk mb-4">
+            <h3 class="h5 mb-3">Alap lightbox</h3>
+            <div class="lightbox-galeria">
+                <div class="galeria-grid">
+                    <a href="#lightbox1" class="galeria-elem">
+                        <img src="https://picsum.photos/400/300?random=9" alt="Galéria kép">
+                    </a>
+                    <a href="#lightbox2" class="galeria-elem">
+                        <img src="https://picsum.photos/400/300?random=10" alt="Galéria kép">
+                    </a>
+                    <a href="#lightbox3" class="galeria-elem">
+                        <img src="https://picsum.photos/400/300?random=11" alt="Galéria kép">
+                    </a>
+                    <a href="#lightbox4" class="galeria-elem">
+                        <img src="https://picsum.photos/400/300?random=12" alt="Galéria kép">
+                    </a>
+                </div>
+
+                <!-- Lightbox ablakok -->
+                <div class="lightbox" id="lightbox1">
+                    <div class="lightbox-tartalom">
+                        <img src="https://picsum.photos/800/600?random=9" alt="Nagy kép">
+                        <a href="#" class="lightbox-bezar">×</a>
+                    </div>
+                </div>
+                <div class="lightbox" id="lightbox2">
+                    <div class="lightbox-tartalom">
+                        <img src="https://picsum.photos/800/600?random=10" alt="Nagy kép">
+                        <a href="#" class="lightbox-bezar">×</a>
+                    </div>
+                </div>
+                <div class="lightbox" id="lightbox3">
+                    <div class="lightbox-tartalom">
+                        <img src="https://picsum.photos/800/600?random=11" alt="Nagy kép">
+                        <a href="#" class="lightbox-bezar">×</a>
+                    </div>
+                </div>
+                <div class="lightbox" id="lightbox4">
+                    <div class="lightbox-tartalom">
+                        <img src="https://picsum.photos/800/600?random=12" alt="Nagy kép">
+                        <a href="#" class="lightbox-bezar">×</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lightbox leírással -->
+        <div class="demo-blokk">
+            <h3 class="h5 mb-3">Lightbox leírással</h3>
+            <div class="lightbox-galeria leiras">
+                <div class="galeria-grid">
+                    <a href="#lightbox5" class="galeria-elem">
+                        <img src="https://picsum.photos/400/300?random=13" alt="Galéria kép">
+                        <div class="galeria-leiras">Első kép leírása</div>
+                    </a>
+                    <a href="#lightbox6" class="galeria-elem">
+                        <img src="https://picsum.photos/400/300?random=14" alt="Galéria kép">
+                        <div class="galeria-leiras">Második kép leírása</div>
+                    </a>
+                </div>
+
+                <!-- Lightbox ablakok -->
+                <div class="lightbox" id="lightbox5">
+                    <div class="lightbox-tartalom">
+                        <img src="https://picsum.photos/800/600?random=13" alt="Nagy kép">
+                        <div class="lightbox-leiras">
+                            <h4>Első kép</h4>
+                            <p>Részletes leírás az első képhez. Lorem ipsum dolor sit amet.</p>
+                        </div>
+                        <a href="#" class="lightbox-bezar">×</a>
+                    </div>
+                </div>
+                <div class="lightbox" id="lightbox6">
+                    <div class="lightbox-tartalom">
+                        <img src="https://picsum.photos/800/600?random=14" alt="Nagy kép">
+                        <div class="lightbox-leiras">
+                            <h4>Második kép</h4>
+                            <p>Részletes leírás a második képhez. Lorem ipsum dolor sit amet.</p>
+                        </div>
+                        <a href="#" class="lightbox-bezar">×</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

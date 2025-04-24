@@ -1,0 +1,448 @@
+/* Alap stílusok */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.demo-section {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Animált fejléc */
+.animalt-fejlec {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Fejléc animációk */
+.fokuszban {
+    animation: fokusz 1s ease-out;
+}
+
+@keyframes fokusz {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.csuszas-fel {
+    animation: csuszas 0.5s ease-out 0.5s both;
+}
+
+@keyframes csuszas {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Átmenetek */
+.atmenet-kartya {
+    transition: transform 0.3s ease;
+}
+
+.atmenet-kartya:hover {
+    transform: scale(1.1);
+}
+
+.atmenet-kartya-szin .kartya-test {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.atmenet-kartya-szin:hover .kartya-test {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.atmenet-kartya-forgatas {
+    transition: transform 0.5s ease;
+}
+
+.atmenet-kartya-forgatas:hover {
+    transform: rotate(360deg);
+}
+
+.atmenet-kartya-osszetett {
+    transition: all 0.5s ease;
+}
+
+.atmenet-kartya-osszetett:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Kártya alap stílusok */
+.kartya-test {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    height: 100%;
+}
+
+/* Animációk */
+.pulzalas {
+    animation: pulzal 2s ease-in-out infinite;
+}
+
+@keyframes pulzal {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.lebego {
+    animation: lebeg 3s ease-in-out infinite;
+}
+
+@keyframes lebeg {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.razo:hover {
+    animation: raz 0.5s ease-in-out;
+}
+
+/* Folytatás az előző kódtól */
+
+@keyframes raz {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+}
+
+.villogo {
+    animation: villog 2s ease-in-out infinite;
+}
+
+@keyframes villog {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Bonyolultabb animációk */
+.betu-animacio .animalt-szoveg {
+    display: inline-block;
+}
+
+.betu-animacio .animalt-szoveg span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: betuMegjelenes 0.5s forwards;
+}
+
+@keyframes betuMegjelenes {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.betolto-ikon {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    animation: forog 1s linear infinite;
+}
+
+@keyframes forog {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Mikro-interakciók - Gombok */
+.gomb-hover-1 {
+    background: #3498db;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.gomb-hover-1:hover {
+    transform: translateY(-3px);
+}
+
+.gomb-hover-2 {
+    background: #2ecc71;
+    color: white;
+    transition: box-shadow 0.3s ease;
+}
+
+.gomb-hover-2:hover {
+    box-shadow: 0 5px 15px rgba(46, 204, 113, 0.4);
+}
+
+.gomb-hover-3 {
+    background: transparent;
+    border: 2px solid #e74c3c;
+    color: #e74c3c;
+    transition: all 0.3s ease;
+}
+
+.gomb-hover-3:hover {
+    background: #e74c3c;
+    color: white;
+}
+
+.gomb-hover-4 {
+    background: linear-gradient(45deg, #3498db, #2ecc71);
+    background-size: 200% 100%;
+    color: white;
+    transition: background-position 0.3s ease;
+}
+
+.gomb-hover-4:hover {
+    background-position: 100% 0;
+}
+
+/* Input effektek */
+.input-effekt input {
+    transition: box-shadow 0.3s ease;
+}
+
+.input-effekt input:focus {
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
+}
+
+.input-effekt-hatar input {
+    border: none;
+    border-bottom: 2px solid #ddd;
+    transition: border-color 0.3s ease;
+}
+
+.input-effekt-hatar input:focus {
+    border-color: #3498db;
+}
+
+.input-effekt-lebego {
+    position: relative;
+}
+
+.input-effekt-lebego label {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.input-effekt-lebego input:focus + label,
+.input-effekt-lebego input:not(:placeholder-shown) + label {
+    top: 0;
+    font-size: 12px;
+    color: #3498db;
+}
+
+/* Töltősávok */
+.toltosav-1 {
+    width: 0;
+    height: 20px;
+    background: linear-gradient(45deg, #3498db, #2ecc71);
+    animation: toltes1 2s ease-in-out infinite;
+}
+
+@keyframes toltes1 {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+
+.toltosav-2 {
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(90deg, #3498db 50%, #f3f3f3 50%);
+    background-size: 200% 100%;
+    animation: toltes2 2s linear infinite;
+}
+
+@keyframes toltes2 {
+    0% { background-position: 100% 0; }
+    100% { background-position: -100% 0; }
+}
+
+.toltosav-3 {
+    width: 0;
+    height: 20px;
+    background: #3498db;
+    animation: toltes3 3s ease-in-out infinite;
+}
+
+@keyframes toltes3 {
+    0% { width: 0; }
+    50% { width: 100%; }
+    100% { width: 0; }
+}
+
+/* Ikon animációk */
+.ikon-container {
+    display: flex;
+    gap: 20px;
+}
+
+.animalt-ikon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.sziv {
+    background: url('data:image/svg+xml,<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>') center/contain no-repeat;
+    transition: transform 0.3s ease;
+}
+
+.sziv:hover {
+    transform: scale(1.2) rotate(10deg);
+}
+
+/* Komplex példák stílusai */
+.kep-kartya {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.kep-kartya img {
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.kartya-overlay {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 20px;
+    transition: bottom 0.5s ease;
+}
+
+.kep-kartya:hover img {
+    transform: scale(1.1);
+}
+
+.kep-kartya:hover .kartya-overlay {
+    bottom: 0;
+}
+
+.flip-kartya-container {
+    perspective: 1000px;
+}
+
+.flip-kartya {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-kartya:hover {
+    transform: rotateY(180deg);
+}
+
+.elol, .hatul {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.elol {
+    background: white;
+}
+
+.hatul {
+    background: #3498db;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    padding: 20px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: #3498db;
+}
+
+.timeline-elem {
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.timeline-tartalom {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    width: calc(50% - 30px);
+    margin-left: auto;
+    opacity: 0;
+    transform: translateX(50px);
+    animation: timelineMegjelenes 0.5s ease forwards;
+}
+
+.timeline-elem:nth-child(odd) .timeline-tartalom {
+    margin-left: 0;
+    margin-right: auto;
+    transform: translateX(-50px);
+}
+
+@keyframes timelineMegjelenes {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Reszponzív igazítások */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 30px;
+    }
+
+    .timeline-tartalom {
+        width: calc(100% - 60px);
+        margin-left: 60px !important;
+    }
+
+    .timeline-elem:nth-child(odd) .timeline-tartalom {
+        margin-right: 0;
+    }
+}

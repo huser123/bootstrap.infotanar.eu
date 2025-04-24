@@ -1,0 +1,200 @@
+/* Alap stílusok */
+body {
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 5rem;
+}
+
+/* Demo szekció stílusok */
+.demo-section {
+    background-color: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Demo doboz stílusok */
+.demo-box {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Utility demo elemek */
+.utility-demo {
+    padding: 1rem;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.utility-demo-border {
+    background-color: white;
+    border: 2px dashed #dee2e6;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Flex container demo */
+.demo-flex-container {
+    border: 2px dashed #dee2e6;
+    border-radius: 8px;
+}
+
+/* Position demo */
+.demo-position-container {
+    height: 300px;
+    background-color: white;
+    border: 2px dashed #dee2e6;
+    border-radius: 8px;
+    margin: 3rem 0;
+}
+
+/* Színátmenetes háttér header-hez */
+.bg-primary {
+    background: linear-gradient(45deg, #0d6efd, #0dcaf0) !important;
+}
+
+/* Shadow variációk demonstrálásához */
+.shadow-sm {
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075) !important;
+}
+
+.shadow {
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
+}
+
+.shadow-lg {
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important;
+}
+
+/* Interaktív elemek */
+.utility-demo, 
+.demo-box,
+.shadow-sm,
+.shadow,
+.shadow-lg {
+    transition: all 0.3s ease;
+}
+
+.utility-demo:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Border demonstrációs elemek */
+[class*="border"] {
+    background-color: white;
+    min-width: 100px;
+    text-align: center;
+}
+
+/* Display példák stílusai */
+.d-inline {
+    min-width: 100px;
+    text-align: center;
+}
+
+.d-block {
+    width: 100%;
+    text-align: center;
+}
+
+/* Ratio container stílusok */
+.ratio > div {
+    border-radius: 8px;
+}
+
+/* Fejléc stílusok finomítása */
+h2 {
+    color: #333;
+    font-weight: 600;
+}
+
+.h5 {
+    color: #555;
+    font-weight: 500;
+}
+
+/* Példa szekciók közötti elválasztó */
+.border-bottom {
+    border-color: #e9ecef !important;
+}
+
+/* Utility példák kiemelése */
+.demo-box .utility-demo {
+    min-width: 100px;
+}
+
+/* Színek demonstrálása */
+[class*="bg-"] {
+    border-radius: 5px;
+}
+
+/* Pozicionálási példák */
+.position-relative {
+    background-color: #f8f9fa;
+}
+
+.position-absolute {
+    min-width: auto;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+}
+
+/* Gap osztályok demonstrálása */
+.gap-3 {
+    gap: 1rem !important;
+}
+
+.gap-4 {
+    gap: 1.5rem !important;
+}
+
+/* Flex elemek alapmérete */
+.d-flex > * {
+    min-width: 100px;
+}
+
+/* Hover effektek a demo elemekre */
+.demo-box:hover {
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.shadow-sm:hover,
+.shadow:hover,
+.shadow-lg:hover {
+    transform: translateY(-2px);
+}
+
+/* Ratio elemek stílusai */
+.ratio > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 500;
+}
+
+/* Segédosztályok a demo elemekhez */
+.text-white {
+    color: white !important;
+}
+
+.min-vh-100 {
+    min-height: 100vh;
+}
+
+/* Példa elemek reszponzivitása */
+@media (max-width: 768px) {
+    .demo-position-container {
+        height: 400px;
+    }
+    
+    .utility-demo {
+        font-size: 0.875rem;
+        padding: 0.75rem;
+    }
+    
+    .demo-section {
+        padding: 1.5rem;
+    }
+}

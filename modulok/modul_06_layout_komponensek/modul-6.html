@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Layout Komponensek</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="modul-6.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Fejléc -->
+    <header class="bg-dark text-white py-5 mb-5">
+        <div class="container">
+            <h1 class="display-4 text-center">Bootstrap Layout Rendszer</h1>
+            <p class="lead text-center mb-0">Konténerek, Sorok és Oszlopok részletes bemutatása</p>
+        </div>
+    </header>
+
+    <!-- Konténer típusok -->
+    <section class="mb-5">
+        <div class="container">
+            <h2 class="mb-4">Konténer Típusok</h2>
+            
+            <div class="demo-section">
+                <!-- .container -->
+                <div class="konter-demo">
+                    <p class="demo-label">.container</p>
+                    <div class="container border p-3 mb-4">
+                        Fix szélességű konténer
+                    </div>
+                </div>
+
+                <!-- .container-fluid -->
+                <div class="konter-demo">
+                    <p class="demo-label">.container-fluid</p>
+                    <div class="container-fluid border p-3 mb-4">
+                        Teljes szélességű konténer
+                    </div>
+                </div>
+
+                <!-- .container-{breakpoint} -->
+                <div class="konter-demo">
+                    <p class="demo-label">.container-sm</p>
+                    <div class="container-sm border p-3 mb-4">
+                        100% < 576px
+                    </div>
+                </div>
+
+                <div class="konter-demo">
+                    <p class="demo-label">.container-md</p>
+                    <div class="container-md border p-3 mb-4">
+                        100% < 768px
+                    </div>
+                </div>
+
+                <div class="konter-demo">
+                    <p class="demo-label">.container-lg</p>
+                    <div class="container-lg border p-3 mb-4">
+                        100% < 992px
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grid Rendszer -->
+    <section class="mb-5">
+        <div class="container">
+            <h2 class="mb-4">Grid Rendszer</h2>
+            
+            <!-- Alap Grid -->
+            <div class="demo-section mb-5">
+                <h3 class="h5 mb-4">Alap Grid Rendszer</h3>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="grid-demo p-3">.col-4</div>
+                    </div>
+                    <div class="col-4">
+                        <div class="grid-demo p-3">.col-4</div>
+                    </div>
+                    <div class="col-4">
+                        <div class="grid-demo p-3">.col-4</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reszponzív Grid -->
+            <div class="demo-section mb-5">
+                <h3 class="h5 mb-4">Reszponzív Grid</h3>
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-3 mb-3">
+                        <div class="grid-demo p-3">
+                            .col-12 .col-md-6 .col-lg-3
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 mb-3">
+                        <div class="grid-demo p-3">
+                            .col-12 .col-md-6 .col-lg-3
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 mb-3">
+                        <div class="grid-demo p-3">
+                            .col-12 .col-md-6 .col-lg-3
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 mb-3">
+                        <div class="grid-demo p-3">
+                            .col-12 .col-md-6 .col-lg-3
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Auto-layout Grid -->
+            <div class="demo-section mb-5">
+                <h3 class="h5 mb-4">Auto-layout Grid</h3>
+                <div class="row">
+                    <div class="col">
+                        <div class="grid-demo p-3">.col</div>
+                    </div>
+                    <div class="col">
+                        <div class="grid-demo p-3">.col</div>
+                    </div>
+                    <div class="col">
+                        <div class="grid-demo p-3">.col</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Változó szélesség -->
+            <div class="demo-section mb-5">
+                <h3 class="h5 mb-4">Változó szélesség</h3>
+                <div class="row justify-content-center">
+                    <div class="col-auto">
+                        <div class="grid-demo p-3">Változó szélesség</div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="grid-demo p-3">Tartalom alapján</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grid Elrendezések -->
+    <section class="mb-5">
+        <div class="container">
+            <h2 class="mb-4">Grid Elrendezések</h2>
+
+            <!-- Oszlop sortörés -->
+            <div class="demo-section mb-5">
+                <h3 class="h5 mb-4">Oszlop sortörés</h3>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="grid-demo p-3">.col-6</div>
+                    </div>
+                    <div class="col-6">
+                        <div class="grid-demo p-3">.col-6</div>
+                    </div>
+                    <div class="w-100"></div>
+                    <div class="col-6">
+                        <div class="grid-demo p-3">.col-6</div>
+                    </div>
+                    <div class="col-6">
+                        <div class="grid-demo p-3">.col-6</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Oszlop rendezés -->
+            <div class="demo-section mb-5">
+                <h3 class="h5 mb-4">Oszlop rendezés</h3>
+                <div class="row">
+                    <div class="col-4 order-3">
+                        <div class="grid-demo p-3">Első, de .order-3</div>
+                    </div>
+                    <div class="col-4 order-1">
+                        <div class="grid-demo p-3">Második, de .order-1</div>
+                    </div>
+                    <div class="col-4 order-2">
+                        <div class="grid-demo p-3">Harmadik, de .order-2</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Offset használata -->
+            <div class="demo-section mb-5">
+                <h3 class="h5 mb-4">Offset használata</h3>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="grid-demo p-3">.col-md-4</div>
+                    </div>
+                    <div class="col-md-4 offset-md-4">
+                        <div class="grid-demo p-3">.col-md-4 .offset-md-4</div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-3 offset-md-3">
+                        <div class="grid-demo p-3">.col-md-3 .offset-md-3</div>
+                    </div>
+                    <div class="col-md-3 offset-md-3">
+                        <div class="grid-demo p-3">.col-md-3 .offset-md-3</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Beágyazott sorok -->
+            <div class="demo-section">
+                <h3 class="h5 mb-4">Beágyazott sorok</h3>
+                <div class="row">
+                    <div class="col-sm-9">
+                        <div class="grid-demo p-3">
+                            .col-sm-9
+                            <div class="row mt-3">
+                                <div class="col-8 col-sm-6">
+                                    <div class="grid-demo p-3">.col-8 .col-sm-6</div>
+                                </div>
+                                <div class="col-4 col-sm-6">
+                                    <div class="grid-demo p-3">.col-4 .col-sm-6</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flex viselkedés -->
+    <section class="mb-5">
+        <div class="container">
+            <h2 class="mb-4">Flex Grid Viselkedés</h2>
+
+            <!-- Vízszintes igazítás -->
+            <div class="demo-section mb-5">
+                <h3 class="h5 mb-4">Vízszintes igazítás</h3>
+                <div class="row justify-content-start mb-3">
+                    <div class="col-4">
+                        <div class="grid-demo p-3">.justify-content-start</div>
+                    </div>
+                </div>
+                <div class="row justify-content-center mb-3">
+                    <div class="col-4">
+                        <div class="grid-demo p-3">.justify-content-center</div>
+                    </div>
+                </div>
+                <div class="row justify-content-end mb-3">
+                    <div class="col-4">
+                        <div class="grid-demo p-3">.justify-content-end</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Függőleges igazítás -->
+            <div class="demo-section">
+                <h3 class="h5 mb-4">Függőleges igazítás</h3>
+                <div class="row align-items-start" style="height: 150px;">
+                    <div class="col">
+                        <div class="grid-demo h-50 p-3">.align-items-start</div>
+                    </div>
+                    <div class="col">
+                        <div class="grid-demo h-50 p-3">.align-items-start</div>
+                    </div>
+                    <div class="col">
+                        <div class="grid-demo h-50 p-3">.align-items-start</div>
+                    </div>
+                </div>
+                <div class="row align-items-center mt-4" style="height: 150px;">
+                    <div class="col">
+                        <div class="grid-demo h-50 p-3">.align-items-center</div>
+                    </div>
+                    <div class="col">
+                        <div class="grid-demo h-50 p-3">.align-items-center</div>
+                    </div>
+                    <div class="col">
+                        <div class="grid-demo h-50 p-3">.align-items-center</div>
+                    </div>
+                </div>
+                <div class="row align-items-end mt-4" style="height: 150px;">
+                    <div class="col">
+                        <div class="grid-demo h-50 p-3">.align-items-end</div>
+                    </div>
+                    <div class="col">
+                        <div class="grid-demo h-50 p-3">.align-items-end</div>
+                    </div>
+                    <div class="col">
+                        <div class="grid-demo h-50 p-3">.align-items-end</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

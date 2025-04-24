@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Animációk és Átmenetek</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="modul-7.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Fejléc animált háttérrel -->
+    <header class="animalt-fejlec text-white text-center py-5 mb-5">
+        <div class="container">
+            <h1 class="display-4 fokuszban mb-4">Animációk és Átmenetek</h1>
+            <p class="lead csuszas-fel">CSS alapú animációk és átmenetek bemutatása</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Átmenetek szekció -->
+        <section class="demo-section mb-5">
+            <h2 class="text-center mb-5">Átmenetek (Transitions)</h2>
+            
+            <!-- Hover átmenetek -->
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="atmenet-kartya">
+                        <div class="kartya-test">
+                            <h3>Méret</h3>
+                            <p>Hover a méretváltozáshoz</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="atmenet-kartya-szin">
+                        <div class="kartya-test">
+                            <h3>Szín</h3>
+                            <p>Hover a színváltozáshoz</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="atmenet-kartya-forgatas">
+                        <div class="kartya-test">
+                            <h3>Forgatás</h3>
+                            <p>Hover a forgatáshoz</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="atmenet-kartya-osszetett">
+                        <div class="kartya-test">
+                            <h3>Összetett</h3>
+                            <p>Több effekt egyszerre</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Animációk szekció -->
+        <section class="demo-section mb-5">
+            <h2 class="text-center mb-5">Animációk (Animations)</h2>
+            
+            <!-- Alap animációk -->
+            <div class="row g-4 mb-5">
+                <div class="col-md-3">
+                    <div class="animacio-doboz pulzalas">
+                        <h3>Pulzálás</h3>
+                        <p>Végtelen pulzálás</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="animacio-doboz lebego">
+                        <h3>Lebegés</h3>
+                        <p>Folyamatos lebegés</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="animacio-doboz razo">
+                        <h3>Rázás</h3>
+                        <p>Hover-re rázás</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="animacio-doboz villogo">
+                        <h3>Villogás</h3>
+                        <p>Villogó effektus</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bonyolultabb animációk -->
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="animacio-doboz-nagy betu-animacio">
+                        <h3>Betűnkénti megjelenés</h3>
+                        <p class="animalt-szoveg">Bootstrap Animációk</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="animacio-doboz-nagy forogva-betoltes">
+                        <h3>Betöltő animáció</h3>
+                        <div class="betolto-ikon"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mikro-interakciók -->
+        <section class="demo-section mb-5">
+            <h2 class="text-center mb-5">Mikro-interakciók</h2>
+            
+            <div class="row g-4">
+                <!-- Gombok -->
+                <div class="col-md-6">
+                    <div class="interakcio-doboz">
+                        <h3 class="mb-4">Gomb Effektek</h3>
+                        <button class="btn gomb-hover-1 me-2 mb-2">Kiemelés</button>
+                        <button class="btn gomb-hover-2 me-2 mb-2">Árnyék</button>
+                        <button class="btn gomb-hover-3 me-2 mb-2">Határvonal</button>
+                        <button class="btn gomb-hover-4 mb-2">Háttér</button>
+                    </div>
+                </div>
+
+                <!-- Input mezők -->
+                <div class="col-md-6">
+                    <div class="interakcio-doboz">
+                        <h3 class="mb-4">Input Effektek</h3>
+                        <div class="input-effekt mb-3">
+                            <input type="text" class="form-control" placeholder="Alap input">
+                        </div>
+                        <div class="input-effekt-hatar mb-3">
+                            <input type="text" class="form-control" placeholder="Határvonalas input">
+                        </div>
+                        <div class="input-effekt-lebego">
+                            <input type="text" class="form-control" placeholder="Lebegő label">
+                            <label>Email cím</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Töltősáv -->
+                <div class="col-md-6">
+                    <div class="interakcio-doboz">
+                        <h3 class="mb-4">Töltősávok</h3>
+                        <div class="progress mb-3">
+                            <div class="toltosav-1"></div>
+                        </div>
+                        <div class="progress mb-3">
+                            <div class="toltosav-2"></div>
+                        </div>
+                        <div class="progress">
+                            <div class="toltosav-3"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ikonok -->
+                <div class="col-md-6">
+                    <div class="interakcio-doboz">
+                        <h3 class="mb-4">Ikon Animációk</h3>
+                        <div class="ikon-container">
+                            <div class="animalt-ikon sziv"></div>
+                            <div class="animalt-ikon csillag"></div>
+                            <div class="animalt-ikon like"></div>
+                            <div class="animalt-ikon harang"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Komplex példák -->
+        <section class="demo-section">
+            <h2 class="text-center mb-5">Komplex Példák</h2>
+            
+            <div class="row g-4">
+                <!-- Képkártya animációval -->
+                <div class="col-md-6">
+                    <div class="kep-kartya">
+                        <img src="https://picsum.photos/600/400?random=1" alt="Kép">
+                        <div class="kartya-overlay">
+                            <h3>Képkártya effekt</h3>
+                            <p>Hover a képre az animációhoz</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flip kártya -->
+                <div class="col-md-6">
+                    <div class="flip-kartya-container">
+                        <div class="flip-kartya">
+                            <div class="elol">
+                                <h3>Flip kártya eleje</h3>
+                                <p>Hover a forgatáshoz</p>
+                            </div>
+                            <div class="hatul">
+                                <h3>Flip kártya hátulja</h3>
+                                <p>Itt a részletes tartalom</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline -->
+                <div class="col-12">
+                    <div class="timeline">
+                        <div class="timeline-elem">
+                            <div class="timeline-tartalom">
+                                <h3>Első lépés</h3>
+                                <p>Az animáció kezdete</p>
+                            </div>
+                        </div>
+                        <div class="timeline-elem">
+                            <div class="timeline-tartalom">
+                                <h3>Második lépés</h3>
+                                <p>Az átmenet folytatása</p>
+                            </div>
+                        </div>
+                        <div class="timeline-elem">
+                            <div class="timeline-tartalom">
+                                <h3>Harmadik lépés</h3>
+                                <p>A mozgás befejezése</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

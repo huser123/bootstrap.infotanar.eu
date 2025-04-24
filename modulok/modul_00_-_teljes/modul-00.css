@@ -1,0 +1,219 @@
+/* Alap változók és stílusok */
+:root {
+    --bootstrap-primary: #7952b3;
+    --bootstrap-secondary: #6c757d;
+    --bootstrap-kek: #0d6efd;
+    --gradient-1: linear-gradient(120deg, #7952b3 0%, #6610f2 100%);
+    --gradient-2: linear-gradient(120deg, #0d6efd 0%, #0dcaf0 100%);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Hero szekció stílusok */
+.hero-hatter {
+    background: var(--gradient-1);
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-hatter::before {
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    background: url('data:image/svg+xml,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="1.5" fill="rgba(255,255,255,0.2)"/></svg>');
+    animation: forgatas 240s linear infinite;
+    opacity: 0.3;
+}
+
+.h-100 {
+    margin-top: 40vh;
+}
+
+@keyframes forgatas {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.hero-tartalom {
+    position: relative;
+    z-index: 2;
+}
+
+/* Navigációs stílusok */
+.egyedi-nav {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Kártya stílusok */
+.showcase-kartya {
+    border: none;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.showcase-kartya:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Komponens bemutató dobozok */
+.komponens-doboz {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.komponens-doboz pre {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+/* Grid bemutató */
+.grid-demo-doboz {
+    background: rgba(121, 82, 179, 0.1);
+    border: 1px solid var(--bootstrap-primary);
+    padding: 1rem;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* Utility bemutató */
+.utility-doboz {
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+/* Parallax háttér */
+.parallax-szekicio {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 80vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.parallax-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Komponens kiemelő */
+.kiemelo-doboz {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.kiemelo-doboz:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.kiemelo-doboz img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Lebegő kártyák */
+.lebego-kartya {
+    height: 300px;
+    perspective: 1000px;
+    margin-bottom: 30px;
+}
+
+.lebego-kartya-belso {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.lebego-kartya:hover .lebego-kartya-belso {
+    transform: rotateY(180deg);
+}
+
+.kartya-elol, .kartya-hatul {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    padding: 2rem;
+}
+
+.kartya-elol {
+    background: var(--gradient-2);
+    color: white;
+}
+
+.kartya-hatul {
+    background: white;
+    transform: rotateY(180deg);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Lábléc stílusok */
+.egyedi-lablec {
+    background: var(--gradient-1);
+    color: white;
+    padding: 5rem 0;
+}
+
+.lablec-lista {
+    list-style: none;
+    padding: 0;
+}
+
+.lablec-link {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.lablec-link:hover {
+    color: white;
+}
+
+/* Egyedi segédosztályok */
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.bg-blur {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.z-index-1 {
+    z-index: 1;
+    position: relative;
+}
+
+/* Reszponzív igazítások */
+@media (max-width: 768px) {
+    .parallax-szekicio {
+        background-attachment: scroll;
+    }
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Kártyák és Komponensek</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="modul-3.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container py-5">
+        <h1 class="text-center mb-5">Kártyák és Komponensek</h1>
+
+        <!-- Alap kártyák -->
+        <section class="mb-5">
+            <h2 class="mb-4">Alap kártyák</h2>
+            <div class="row g-4">
+                <!-- Egyszerű kártya -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Egyszerű kártya</h5>
+                            <p class="card-text">Ez egy alap Bootstrap kártya komponens, csak szöveges tartalommal.</p>
+                            <a href="#" class="btn btn-primary">Tovább</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Képes kártya -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://picsum.photos/400/200?random=1" class="card-img-top" alt="Kártya kép">
+                        <div class="card-body">
+                            <h5 class="card-title">Képes kártya</h5>
+                            <p class="card-text">Ez egy kártya képpel és szöveggel kombinálva.</p>
+                            <a href="#" class="btn btn-primary">Tovább</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fejléces kártya -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header bg-primary text-white">
+                            Fejléces kártya
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Speciális fejléccel</h5>
+                            <p class="card-text">Ez a kártya egy színes fejlécet tartalmaz.</p>
+                            <a href="#" class="btn btn-primary">Tovább</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Speciális kártyák -->
+        <section class="mb-5">
+            <h2 class="mb-4">Speciális kártyák</h2>
+            <div class="row g-4">
+                <!-- Overlay kártya -->
+                <div class="col-md-6">
+                    <div class="card kartya-overlay">
+                        <img src="https://picsum.photos/400/300?random=2" class="card-img" alt="Overlay kép">
+                        <div class="card-img-overlay text-white d-flex flex-column justify-content-end">
+                            <h5 class="card-title">Overlay kártya</h5>
+                            <p class="card-text">A szöveg a kép felett jelenik meg, sötétített háttérrel.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Horizontális kártya -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="https://picsum.photos/200/300?random=3" class="img-fluid rounded-start h-100 w-100 object-fit-cover" alt="Horizontális kép">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Horizontális kártya</h5>
+                                    <p class="card-text">Ez egy horizontális elrendezésű kártya, ahol a kép balra, a szöveg jobbra kerül.</p>
+                                    <a href="#" class="btn btn-primary">Tovább</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interaktív kártyák -->
+        <section class="mb-5">
+            <h2 class="mb-4">Interaktív kártyák</h2>
+            <div class="row g-4">
+                <!-- Hover effektes kártya -->
+                <div class="col-md-4">
+                    <div class="card kartya-hover">
+                        <img src="https://picsum.photos/400/300?random=4" class="card-img-top" alt="Hover kép">
+                        <div class="card-body">
+                            <h5 class="card-title">Hover effekt</h5>
+                            <p class="card-text">Ez a kártya lebeg és árnyékot kap, ha fölévisszük az egeret.</p>
+                            <a href="#" class="btn btn-primary">Tovább</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fordítós kártya -->
+                <div class="col-md-4">
+                    <div class="kartya-fordito">
+                        <div class="kartya-belso">
+                            <div class="kartya-elol">
+                                <div class="card h-100">
+                                    <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                                        <h5 class="card-title">Fordítós kártya eleje</h5>
+                                        <p class="card-text text-center">Vidd az egeret a kártya fölé!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="kartya-hatul">
+                                <div class="card h-100">
+                                    <div class="card-body d-flex flex-column justify-content-center align-items-center bg-primary text-white">
+                                        <h5 class="card-title">Fordítós kártya hátulja</h5>
+                                        <p class="card-text text-center">Megfordult a kártya!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lebegő információs kártya -->
+                <div class="col-md-4">
+                    <div class="kartya-info">
+                        <img src="https://picsum.photos/400/300?random=5" class="card-img" alt="Info kép">
+                        <div class="kartya-info-overlay">
+                            <h5>Lebegő információ</h5>
+                            <p>Ez az információs panel akkor jelenik meg, amikor az egeret a kép fölé visszük.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kártya csoportok -->
+        <section class="mb-5">
+            <h2 class="mb-4">Kártya csoportok</h2>
+            <div class="card-group">
+                <div class="card">
+                    <img src="https://picsum.photos/400/200?random=6" class="card-img-top" alt="Csoport 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Első kártya</h5>
+                        <p class="card-text">Az első kártya a csoportban.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://picsum.photos/400/200?random=7" class="card-img-top" alt="Csoport 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Második kártya</h5>
+                        <p class="card-text">A második kártya a csoportban.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://picsum.photos/400/200?random=8" class="card-img-top" alt="Csoport 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Harmadik kártya</h5>
+                        <p class="card-text">A harmadik kártya a csoportban.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

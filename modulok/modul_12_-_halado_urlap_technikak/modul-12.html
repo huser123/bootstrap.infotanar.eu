@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Haladó Űrlap Technikák</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="modul-12.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Fejléc -->
+    <header class="urlap-fejlec py-5 mb-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h1 class="display-4 fw-bold text-white mb-3">Haladó Űrlap Technikák</h1>
+                    <p class="lead text-white-50 mb-0">Komplex és interaktív űrlap megoldások</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Többlépéses űrlap -->
+        <section class="mb-5">
+            <h2 class="text-center fw-bold mb-4">Többlépéses Regisztráció</h2>
+            
+            <div class="demo-blokk">
+                <div class="lepes-urlap">
+                    <!-- Folyamatjelző -->
+                    <div class="lepes-folyamat mb-4">
+                        <div class="folyamat-sav">
+                            <div class="sav-progress" style="width: 0"></div>
+                        </div>
+                        <div class="folyamat-pontok">
+                            <div class="folyamat-pont aktiv">
+                                <div class="pont-ikon">👤</div>
+                                <span class="pont-szoveg">Alapadatok</span>
+                            </div>
+                            <div class="folyamat-pont">
+                                <div class="pont-ikon">📧</div>
+                                <span class="pont-szoveg">Elérhetőség</span>
+                            </div>
+                            <div class="folyamat-pont">
+                                <div class="pont-ikon">🔐</div>
+                                <span class="pont-szoveg">Biztonság</span>
+                            </div>
+                            <div class="folyamat-pont">
+                                <div class="pont-ikon">✅</div>
+                                <span class="pont-szoveg">Megerősítés</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Űrlap lépései -->
+                    <div class="lepes-container">
+                        <!-- 1. lépés: Alapadatok -->
+                        <div class="lepes-panel aktiv" id="lepes1">
+                            <h3 class="h5 mb-4">Személyes adatok</h3>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="lebego-input">
+                                        <input type="text" id="vezeteknev" class="form-control" required>
+                                        <label for="vezeteknev">Vezetéknév</label>
+                                        <div class="input-ikon">👤</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="lebego-input">
+                                        <input type="text" id="keresztnev" class="form-control" required>
+                                        <label for="keresztnev">Keresztnév</label>
+                                        <div class="input-ikon">👤</div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="nemek-valaszto">
+                                        <input type="radio" name="nem" id="ferfi" class="nem-input">
+                                        <label for="ferfi" class="nem-cimke">
+                                            <span class="nem-ikon">👨</span>
+                                            <span>Férfi</span>
+                                        </label>
+                                        <input type="radio" name="nem" id="no" class="nem-input">
+                                        <label for="no" class="nem-cimke">
+                                            <span class="nem-ikon">👩</span>
+                                            <span>Nő</span>
+                                        </label>
+                                        <input type="radio" name="nem" id="egyeb" class="nem-input">
+                                        <label for="egyeb" class="nem-cimke">
+                                            <span class="nem-ikon">👤</span>
+                                            <span>Egyéb</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="lebego-input">
+                                        <input type="date" id="szuletesi_datum" class="form-control" required>
+                                        <label for="szuletesi_datum">Születési dátum</label>
+                                        <div class="input-ikon">📅</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="lebego-input">
+                                        <select id="orszag" class="form-select" required>
+                                            <option value="" selected disabled>Válassz...</option>
+                                            <option value="HU">Magyarország</option>
+                                            <option value="DE">Németország</option>
+                                            <option value="UK">Egyesült Királyság</option>
+                                        </select>
+                                        <label for="orszag">Ország</label>
+                                        <div class="input-ikon">🌍</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lepes-gombok">
+                                <button class="btn btn-primary kovetkezo-gomb">Következő</button>
+                            </div>
+                        </div>
+
+                        <!-- 2. lépés: Elérhetőség -->
+                        <div class="lepes-panel" id="lepes2">
+                            <h3 class="h5 mb-4">Elérhetőségi adatok</h3>
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <div class="lebego-input">
+                                        <input type="email" id="email" class="form-control" required>
+                                        <label for="email">Email cím</label>
+                                        <div class="input-ikon">📧</div>
+                                        <div class="email-ellenorzes">
+                                            <div class="ellenorzes-elem">
+                                                <span class="elem-ikon">✓</span>
+                                                <span>Érvényes email formátum</span>
+                                            </div>
+                                            <div class="ellenorzes-elem">
+                                                <span class="elem-ikon">✓</span>
+                                                <span>Email cím még nem foglalt</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="lebego-input">
+                                        <input type="tel" id="telefon" class="form-control" required>
+                                        <label for="telefon">Telefonszám</label>
+                                        <div class="input-ikon">📱</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="lebego-input">
+                                        <select id="kapcsolat_mod" class="form-select" required>
+                                            <option value="" selected disabled>Válassz...</option>
+                                            <option value="email">Email</option>
+                                            <option value="telefon">Telefon</option>
+                                            <option value="mindketto">Mindkettő</option>
+                                        </select>
+                                        <label for="kapcsolat_mod">Preferált kapcsolattartási mód</label>
+                                        <div class="input-ikon">💬</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lepes-gombok">
+                                <button class="btn btn-outline-secondary vissza-gomb">Vissza</button>
+                                <button class="btn btn-primary kovetkezo-gomb">Következő</button>
+                            </div>
+                        </div>
+
+                        <!-- 3. lépés: Biztonság -->
+                        <div class="lepes-panel" id="lepes3">
+                            <h3 class="h5 mb-4">Biztonsági beállítások</h3>
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <div class="lebego-input">
+                                        <input type="password" id="jelszo" class="form-control" required>
+                                        <label for="jelszo">Jelszó</label>
+                                        <div class="input-ikon">🔐</div>
+                                        <button type="button" class="jelszo-mutat">👁</button>
+                                    </div>
+                                    <div class="jelszo-ellenorzes">
+                                        <div class="jelszo-progress">
+                                            <div class="progress-sav" style="width: 0"></div>
+                                        </div>
+                                        <div class="ellenorzes-lista">
+                                            <div class="ellenorzes-elem">
+                                                <span class="elem-ikon">✓</span>
+                                                <span>Minimum 8 karakter</span>
+                                            </div>
+                                            <div class="ellenorzes-elem">
+                                                <span class="elem-ikon">✓</span>
+                                                <span>Nagybetű</span>
+                                            </div>
+                                            <div class="ellenorzes-elem">
+                                                <span class="elem-ikon">✓</span>
+                                                <span>Kisbetű</span>
+                                            </div>
+                                            <div class="ellenorzes-elem">
+                                                <span class="elem-ikon">✓</span>
+                                                <span>Szám</span>
+                                            </div>
+                                            <div class="ellenorzes-elem">
+                                                <span class="elem-ikon">✓</span>
+                                                <span>Speciális karakter</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="lebego-input">
+                                        <input type="password" id="jelszo_ismet" class="form-control" required>
+                                        <label for="jelszo_ismet">Jelszó ismét</label>
+                                        <div class="input-ikon">🔐</div>
+                                        <button type="button" class="jelszo-mutat">👁</button>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="ketfaktoros-auth">
+                                        <input type="checkbox" id="ketfaktoros" class="auth-input">
+                                        <label for="ketfaktoros" class="auth-cimke">
+                                            <span class="auth-ikon">🔒</span>
+                                            <div class="auth-szoveg">
+                                                <span class="auth-cim">Kétfaktoros hitelesítés</span>
+                                                <span class="auth-leiras">Extra biztonság az SMS vagy email kód használatával</span>
+                                            </div>
+                                            <div class="auth-kapcsolo"></div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lepes-gombok">
+                                <button class="btn btn-outline-secondary vissza-gomb">Vissza</button>
+                                <button class="btn btn-primary kovetkezo-gomb">Következő</button>
+                            </div>
+                        </div>
+
+                        <!-- 4. lépés: Megerősítés -->
+                        <div class="lepes-panel" id="lepes4">
+                            <h3 class="h5 mb-4">Adatok ellenőrzése</h3>
+                            <div class="osszegzes-panel">
+                                <div class="osszegzes-szekciok">
+                                    <!-- Személyes adatok -->
+                                    <div class="osszegzes-szekcio">
+                                        <div class="szekcio-fejlec">
+                                            <span class="fejlec-ikon">👤</span>
+                                            <h4>Személyes adatok</h4>
+                                            <button class="szerkeszt-gomb" data-lepes="1">Szerkesztés</button>
+                                        </div>
+                                        <div class="szekcio-tartalom">
+                                            <div class="adat-sor">
+                                                <span class="adat-cimke">Teljes név:</span>
+                                                <span class="adat-ertek">Nagy János</span>
+                                            </div>
+                                            <div class="adat-sor">
+                                                <span class="adat-cimke">Nem:</span>
+                                                <span class="adat-ertek">Férfi</span>
+                                            </div>
+                                            <div class="adat-sor">
+                                                <span class="adat-cimke">Születési dátum:</span>
+                                                <span class="adat-ertek">1990.01.01</span>
+                                            </div>
+                                            <div class="adat-sor">
+                                                <span class="adat-cimke">Ország:</span>
+                                                <span class="adat-ertek">Magyarország</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Elérhetőségi adatok -->
+                                    <div class="osszegzes-szekcio">
+                                      <div class="szekcio-fejlec">
+                                          <span class="fejlec-ikon">📧</span>
+                                          <h4>Elérhetőségi adatok</h4>
+                                          <button class="szerkeszt-gomb" data-lepes="2">Szerkesztés</button>
+                                      </div>
+                                      <div class="szekcio-tartalom">
+                                          <div class="adat-sor">
+                                              <span class="adat-cimke">Email:</span>
+                                              <span class="adat-ertek">pelda@email.com</span>
+                                          </div>
+                                          <div class="adat-sor">
+                                              <span class="adat-cimke">Telefonszám:</span>
+                                              <span class="adat-ertek">+36 30 123 4567</span>
+                                          </div>
+                                          <div class="adat-sor">
+                                              <span class="adat-cimke">Kapcsolattartás:</span>
+                                              <span class="adat-ertek">Email és telefon</span>
+                                          </div>
+                                      </div>
+                                  </div>
+
+                                  <!-- Biztonsági beállítások -->
+                                  <div class="osszegzes-szekcio">
+                                      <div class="szekcio-fejlec">
+                                          <span class="fejlec-ikon">🔐</span>
+                                          <h4>Biztonsági beállítások</h4>
+                                          <button class="szerkeszt-gomb" data-lepes="3">Szerkesztés</button>
+                                      </div>
+                                      <div class="szekcio-tartalom">
+                                          <div class="adat-sor">
+                                              <span class="adat-cimke">Jelszó erőssége:</span>
+                                              <div class="jelszo-ero">
+                                                  <div class="ero-sav" style="width: 80%"></div>
+                                                  <span>Erős</span>
+                                              </div>
+                                          </div>
+                                          <div class="adat-sor">
+                                              <span class="adat-cimke">Kétfaktoros auth:</span>
+                                              <span class="adat-ertek">Bekapcsolva</span>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+                              <!-- Felhasználási feltételek -->
+                              <div class="feltetel-panel">
+                                  <div class="feltetel-valaszto">
+                                      <input type="checkbox" id="adatvedelmi" class="feltetel-input" required>
+                                      <label for="adatvedelmi" class="feltetel-cimke">
+                                          <span class="feltetel-marker"></span>
+                                          <span>Elfogadom az <a href="#">Adatvédelmi nyilatkozatot</a> és a <a href="#">Felhasználási feltételeket</a></span>
+                                      </label>
+                                  </div>
+                                  <div class="feltetel-valaszto">
+                                      <input type="checkbox" id="hirlevel" class="feltetel-input">
+                                      <label for="hirlevel" class="feltetel-cimke">
+                                          <span class="feltetel-marker"></span>
+                                          <span>Szeretnék hírlevelet kapni a legújabb ajánlatokról</span>
+                                      </label>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="lepes-gombok">
+                              <button class="btn btn-outline-secondary vissza-gomb">Vissza</button>
+                              <button class="btn btn-primary kuldes-gomb">Regisztráció</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <!-- Drag & Drop fájlfeltöltés -->
+      <section class="mb-5">
+          <h2 class="text-center fw-bold mb-4">Fájl feltöltés</h2>
+          
+          <div class="demo-blokk">
+              <!-- Drag & Drop zóna -->
+              <div class="feltoltes-zona">
+                  <input type="file" id="fajl_feltoltes" class="feltoltes-input" multiple>
+                  <label for="fajl_feltoltes" class="feltoltes-cimke">
+                      <div class="feltoltes-tartalom">
+                          <div class="feltoltes-ikon">📁</div>
+                          <h3 class="feltoltes-szoveg">Húzd ide a fájlokat vagy kattints a feltöltéshez</h3>
+                          <p class="feltoltes-info">Maximum 10MB fájlonként</p>
+                      </div>
+                  </label>
+              </div>
+
+              <!-- Feltöltött fájlok listája -->
+              <div class="feltoltott-fajlok">
+                  <div class="fajl-elem">
+                      <div class="fajl-info">
+                          <div class="fajl-ikon">📄</div>
+                          <div class="fajl-adatok">
+                              <span class="fajl-nev">dokumentum.pdf</span>
+                              <div class="fajl-meret">2.5 MB</div>
+                          </div>
+                      </div>
+                      <div class="fajl-progress">
+                          <div class="progress-sav" style="width: 75%"></div>
+                      </div>
+                      <button class="fajl-torles">×</button>
+                  </div>
+
+                  <div class="fajl-elem">
+                      <div class="fajl-info">
+                          <div class="fajl-ikon">🖼</div>
+                          <div class="fajl-adatok">
+                              <span class="fajl-nev">kep.jpg</span>
+                              <div class="fajl-meret">1.2 MB</div>
+                          </div>
+                      </div>
+                      <div class="fajl-progress">
+                          <div class="progress-sav" style="width: 100%"></div>
+                      </div>
+                      <button class="fajl-torles">×</button>
+                  </div>
+
+                  <div class="fajl-elem hiba">
+                      <div class="fajl-info">
+                          <div class="fajl-ikon">❌</div>
+                          <div class="fajl-adatok">
+                              <span class="fajl-nev">tul_nagy_fajl.zip</span>
+                              <div class="fajl-meret">15 MB</div>
+                          </div>
+                      </div>
+                      <div class="hiba-uzenet">A fájl mérete meghaladja a 10MB-os limitet</div>
+                      <button class="fajl-torles">×</button>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <!-- Dinamikus validáció -->
+      <section class="mb-5">
+          <h2 class="text-center fw-bold mb-4">Dinamikus Validáció</h2>
+          
+          <div class="demo-blokk">
+              <form class="validacio-urlap">
+                  <!-- Email validáció -->
+                  <div class="validacio-mezo">
+                      <label class="validacio-cimke">Email cím</label>
+                      <div class="validacio-kontener">
+                          <input type="email" class="validacio-input" required>
+                          <div class="validacio-ikon">
+                              <span class="siker-ikon">✓</span>
+                              <span class="hiba-ikon">×</span>
+                          </div>
+                      </div>
+                      <div class="validacio-visszajelzes">
+                          <span class="siker-uzenet">Az email cím megfelelő formátumú</span>
+                          <span class="hiba-uzenet">Kérjük, adj meg egy érvényes email címet</span>
+                      </div>
+                  </div>
+
+                  <!-- Jelszó validáció -->
+                  <div class="validacio-mezo">
+                      <label class="validacio-cimke">Jelszó</label>
+                      <div class="validacio-kontener">
+                          <input type="password" class="validacio-input" required>
+                          <div class="validacio-ikon">
+                              <span class="siker-ikon">✓</span>
+                              <span class="hiba-ikon">×</span>
+                          </div>
+                      </div>
+                      <div class="validacio-lista">
+                          <div class="lista-elem aktiv">
+                              <span class="elem-ikon">✓</span>
+                              Minimum 8 karakter
+                          </div>
+                          <div class="lista-elem">
+                              <span class="elem-ikon">✓</span>
+                              Legalább egy nagybetű
+                          </div>
+                          <div class="lista-elem">
+                              <span class="elem-ikon">✓</span>
+                              Legalább egy kisbetű
+                          </div>
+                          <div class="lista-elem">
+                              <span class="elem-ikon">✓</span>
+                              Legalább egy szám
+                          </div>
+                      </div>
+                  </div>
+
+                  <!-- Telefonszám validáció -->
+                  <div class="validacio-mezo">
+                      <label class="validacio-cimke">Telefonszám</label>
+                      <div class="validacio-kontener">
+                          <input type="tel" class="validacio-input" pattern="[0-9]{11}" required>
+                          <div class="validacio-ikon">
+                              <span class="siker-ikon">✓</span>
+                              <span class="hiba-ikon">×</span>
+                          </div>
+                      </div>
+                      <div class="validacio-visszajelzes">
+                          <span class="siker-uzenet">A telefonszám formátuma megfelelő</span>
+                          <span class="hiba-uzenet">Kérjük, adj meg egy érvényes telefonszámot</span>
+                      </div>
+                  </div>
+
+                  <!-- Weboldal validáció -->
+                  <div class="validacio-mezo">
+                      <label class="validacio-cimke">Weboldal</label>
+                      <div class="validacio-kontener">
+                          <input type="url" class="validacio-input">
+                          <div class="validacio-ikon">
+                              <span class="siker-ikon">✓</span>
+                              <span class="hiba-ikon">×</span>
+                          </div>
+                      </div>
+                      <div class="validacio-visszajelzes">
+                          <span class="siker-uzenet">A webhely URL formátuma megfelelő</span>
+                          <span class="hiba-uzenet">Kérjük, adj meg egy érvényes URL-t (pl. https://pelda.hu)</span>
+                      </div>
+                  </div>
+              </form>
+          </div>
+      </section>
+
+      <!-- Összetett választómezők -->
+      <section class="mb-5">
+          <h2 class="text-center fw-bold mb-4">Összetett Választómezők</h2>
+          
+          <div class="demo-blokk">
+              <!-- Tag választó -->
+              <div class="tag-valaszto mb-4">
+                  <label class="valaszto-cimke">Címkék kiválasztása</label>
+                  <div class="tag-kontener">
+                      <div class="tag-elemek">
+                          <span class="tag-elem">
+                              Frontend
+                              <button class="tag-torles">×</button>
+                          </span>
+                          <span class="tag-elem">
+                              JavaScript
+                              <button class="tag-torles">×</button>
+                          </span>
+                          <span class="tag-elem">
+                              React
+                              <button class="tag-torles">×</button>
+                          </span>
+                      </div>
+                      <input type="text" class="tag-input" placeholder="Adj hozzá címkéket...">
+                  </div>
+                  <div class="tag-javaslatok">
+                      <span class="javaslat-elem">Bootstrap</span>
+                      <span class="javaslat-elem">CSS</span>
+                      <span class="javaslat-elem">HTML</span>
+                      <span class="javaslat-elem">TypeScript</span>
+                  </div>
+              </div>
+
+              <!-- Multi select dropdown -->
+              <div class="multi-select mb-4">
+                  <label class="valaszto-cimke">Technológiák</label>
+                  <div class="select-kontener">
+                      <div class="select-fejlec">
+                          <div class="kivalasztott-elemek">
+                              <span class="kivalasztott-elem">
+                                  HTML
+                                  <button class="elem-torles">×</button>
+                              </span>
+                              <span class="kivalasztott-elem">
+                                  CSS
+                                  <button class="elem-torles">×</button>
+                              </span>
+                          </div>
+                          <button class="select-toggle">▼</button>
+                      </div>
+                      <div class="select-lista">
+                          <div class="kereses-mezo">
+                              <input type="text" placeholder="Keresés..." class="kereses-input">
+                          </div>
+                          <div class="lista-elemek">
+                              <label class="lista-elem">
+                                  <input type="checkbox" checked>
+                                  <span>HTML</span>
+                              </label>
+                              <label class="lista-elem">
+                                  <input type="checkbox" checked>
+                                  <span>CSS</span>
+                              </label>
+                              <label class="lista-elem">
+                                  <input type="checkbox">
+                                  <span>JavaScript</span>
+                              </label>
+                              <label class="lista-elem">
+                                  <input type="checkbox">
+                                  <span>PHP</span>
+                              </label>
+                              <label class="lista-elem">
+                                  <input type="checkbox">
+                                  <span>Python</span>
+                              </label>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Színválasztó -->
+              <div class="szin-valaszto mb-4">
+                  <label class="valaszto-cimke">Színséma kiválasztása</label>
+                  <div class="szin-kontener">
+                    <div class="szin-elemek">
+                        <label class="szin-elem">
+                            <input type="radio" name="szin_tema" value="kek">
+                            <span class="szin-minta" style="background: linear-gradient(45deg, #1a73e8, #4285f4)">
+                                <span class="szin-nev">Kék</span>
+                            </span>
+                        </label>
+                        <label class="szin-elem">
+                            <input type="radio" name="szin_tema" value="zold">
+                            <span class="szin-minta" style="background: linear-gradient(45deg, #0f9d58, #34a853)">
+                                <span class="szin-nev">Zöld</span>
+                            </span>
+                        </label>
+                        <label class="szin-elem">
+                            <input type="radio" name="szin_tema" value="piros">
+                            <span class="szin-minta" style="background: linear-gradient(45deg, #d93025, #ea4335)">
+                                <span class="szin-nev">Piros</span>
+                            </span>
+                        </label>
+                        <label class="szin-elem">
+                            <input type="radio" name="szin_tema" value="lila">
+                            <span class="szin-minta" style="background: linear-gradient(45deg, #9334e6, #7627bb)">
+                                <span class="szin-nev">Lila</span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="egyedi-szin">
+                        <input type="color" id="egyedi_szin" class="szin-input">
+                        <label for="egyedi_szin" class="szin-cimke">Egyedi szín</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dátumválasztó tartomány -->
+            <div class="datum-valaszto">
+                <label class="valaszto-cimke">Időtartam kiválasztása</label>
+                <div class="datum-kontener">
+                    <div class="datum-mezo">
+                        <input type="date" class="datum-input" id="datum_tol">
+                        <label for="datum_tol" class="datum-cimke">Kezdő dátum</label>
+                    </div>
+                    <div class="datum-elvalaszto">-</div>
+                    <div class="datum-mezo">
+                        <input type="date" class="datum-input" id="datum_ig">
+                        <label for="datum_ig" class="datum-cimke">Záró dátum</label>
+                    </div>
+                </div>
+                <div class="gyors-valasztok">
+                    <button class="gyors-gomb">Ma</button>
+                    <button class="gyors-gomb">Tegnap</button>
+                    <button class="gyors-gomb">Utolsó 7 nap</button>
+                    <button class="gyors-gomb">Utolsó 30 nap</button>
+                    <button class="gyors-gomb">Egyedi</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

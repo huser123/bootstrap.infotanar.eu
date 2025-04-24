@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 Bemutató</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="modul-00.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigációs sáv -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top egyedi-nav">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Bootstrap 5 Demo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#alapok">Alapok</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#komponensek">Komponensek</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#utilities">Utilities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#peldak">Példák</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero szekció -->
+    <header class="hero-hatter">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center justify-content-center text-center">
+                <div class="col-md-10 hero-tartalom">
+                    <h1 class="display-1 text-white fw-bold mb-4 text-shadow">Bootstrap 5</h1>
+                    <p class="lead text-white mb-5">A világ legnépszerűbb front-end keretrendszere, ami lehetővé teszi a gyors és reszponzív webfejlesztést.</p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <button class="btn btn-light btn-lg px-4">Kezdjük el</button>
+                        <button class="btn btn-outline-light btn-lg px-4">Dokumentáció</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Grid rendszer bemutató -->
+    <section id="alapok" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Grid Rendszer</h2>
+
+            <!-- Alap grid -->
+            <div class="komponens-doboz mb-5">
+                <h3>Alapvető 12 oszlopos rendszer</h3>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="grid-demo-doboz">col-md-4</div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="grid-demo-doboz">col-md-4</div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="grid-demo-doboz">col-md-4</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Beágyazott grid -->
+            <div class="komponens-doboz">
+                <h3>Beágyazott sorok</h3>
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="grid-demo-doboz">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="grid-demo-doboz">Beágyazott col-6</div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="grid-demo-doboz">Beágyazott col-6</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="grid-demo-doboz">col-md-3</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Színek és tipográfia -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Színek és Tipográfia</h2>
+
+            <!-- Színek -->
+            <div class="row mb-5">
+                <div class="col-md-6">
+                    <div class="komponens-doboz">
+                        <h3 class="mb-4">Bootstrap színek</h3>
+                        <div class="d-flex flex-wrap gap-2">
+                            <div class="p-3 bg-primary text-white">Primary</div>
+                            <div class="p-3 bg-secondary text-white">Secondary</div>
+                            <div class="p-3 bg-success text-white">Success</div>
+                            <div class="p-3 bg-danger text-white">Danger</div>
+                            <div class="p-3 bg-warning">Warning</div>
+                            <div class="p-3 bg-info">Info</div>
+                            <div class="p-3 bg-light">Light</div>
+                            <div class="p-3 bg-dark text-white">Dark</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tipográfia -->
+                <div class="col-md-6">
+                    <div class="komponens-doboz">
+                        <h3 class="mb-4">Tipográfia példák</h3>
+                        <h1>h1. Bootstrap címsor</h1>
+                        <h2>h2. Bootstrap címsor</h2>
+                        <h3>h3. Bootstrap címsor</h3>
+                        <p class="lead">Ez egy kiemelt bekezdés.</p>
+                        <p>Ez egy normál bekezdés szöveg.</p>
+                        <p class="text-muted">Ez egy halványított szöveg.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Komponensek -->
+    <section id="komponensek" class="parallax-szekicio" style="background-image: url('https://picsum.photos/1920/1080?random=1');">
+        <div class="parallax-overlay"></div>
+        <div class="container position-relative">
+            <h2 class="text-center text-white mb-5">Bootstrap Komponensek</h2>
+
+            <!-- Komponens kártyák -->
+            <div class="row g-4">
+                <!-- Gombok -->
+                <div class="col-md-4">
+                    <div class="kiemelo-doboz p-4">
+                        <h3 class="mb-4">Gombok</h3>
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-primary">Primary</button>
+                            <button class="btn btn-secondary">Secondary</button>
+                            <button class="btn btn-success">Success</button>
+                            <button class="btn btn-danger">Danger</button>
+                            <button class="btn btn-warning">Warning</button>
+                            <button class="btn btn-info">Info</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Űrlap elemek -->
+                <div class="col-md-4">
+                    <div class="kiemelo-doboz p-4">
+                        <h3 class="mb-4">Űrlap elemek</h3>
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label">Szövegmező</label>
+                                <input type="text" class="form-control" placeholder="Placeholder">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Select</label>
+                                <select class="form-select">
+                                    <option>Választás 1</option>
+                                    <option>Választás 2</option>
+                                    <option>Választás 3</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label">Checkbox</label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Értesítések -->
+                <div class="col-md-4">
+                    <div class="kiemelo-doboz p-4">
+                        <h3 class="mb-4">Értesítések</h3>
+                        <div class="alert alert-primary" role="alert">
+                            Ez egy primary értesítés
+                        </div>
+                        <div class="alert alert-success" role="alert">
+                            Ez egy success értesítés
+                        </div>
+                        <div class="alert alert-warning" role="alert">
+                            Ez egy warning értesítés
+                        </div>
+                        <div class="alert alert-danger" role="alert">
+                            Ez egy danger értesítés
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Második sor komponensek -->
+            <div class="row g-4 mt-4">
+                <!-- Kártyák -->
+                <div class="col-md-6">
+                    <div class="kiemelo-doboz p-4">
+                        <h3 class="mb-4">Kártyák</h3>
+                        <div class="card">
+                            <img src="https://picsum.photos/400/200?random=2" class="card-img-top" alt="Kártya kép">
+                            <div class="card-body">
+                                <h5 class="card-title">Kártya címe</h5>
+                                <p class="card-text">Ez egy példa kártya szövege, ami demonstrálja a Bootstrap kártya komponens kinézetét.</p>
+                                <button class="btn btn-primary">Gomb a kártyán</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lista csoportok -->
+                <div class="col-md-6">
+                    <div class="kiemelo-doboz p-4">
+                        <h3 class="mb-4">Lista csoportok</h3>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action active">
+                                Aktív elem
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">Második elem</a>
+                            <a href="#" class="list-group-item list-group-item-action">Harmadik elem</a>
+                            <a href="#" class="list-group-item list-group-item-action disabled">Inaktív elem</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Utilities bemutató -->
+    <section id="utilities" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Bootstrap Utilities</h2>
+
+            <!-- Spacing és Margin -->
+            <div class="komponens-doboz mb-5">
+                <h3 class="mb-4">Spacing és Margin</h3>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="bg-primary text-white p-2 mb-3">p-2 (padding)</div>
+                        <div class="bg-success text-white p-3 mb-3">p-3 (padding)</div>
+                        <div class="bg-info p-4">p-4 (padding)</div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="bg-warning mb-2">mb-2 (margin)</div>
+                        <div class="bg-danger text-white mb-3">mb-3 (margin)</div>
+                        <div class="bg-dark text-white mb-4">mb-4 (margin)</div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="bg-secondary text-white py-2 px-3">py-2 px-3</div>
+                        <div class="mt-3 bg-info py-3 px-4">py-3 px-4</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Display és Flexbox -->
+            <div class="komponens-doboz mb-5">
+                <h3 class="mb-4">Display és Flexbox</h3>
+                <div class="d-flex justify-content-between mb-3 p-3 bg-light border">
+                    <div class="p-2 bg-primary text-white">Flex elem 1</div>
+                    <div class="p-2 bg-primary text-white">Flex elem 2</div>
+                    <div class="p-2 bg-primary text-white">Flex elem 3</div>
+                </div>
+                <div class="d-flex flex-column align-items-center p-3 bg-light border">
+                    <div class="p-2 mb-2 bg-success text-white">Oszlop elem 1</div>
+                    <div class="p-2 mb-2 bg-success text-white">Oszlop elem 2</div>
+                    <div class="p-2 bg-success text-white">Oszlop elem 3</div>
+                </div>
+            </div>
+
+            <!-- Pozícionálás -->
+            <div class="komponens-doboz position-relative" style="height: 200px;">
+                <h3 class="mb-4">Pozícionálás</h3>
+                <div class="position-absolute top-0 start-0 p-2 bg-primary text-white">Top-Start</div>
+                <div class="position-absolute top-0 end-0 p-2 bg-success text-white">Top-End</div>
+                <div class="position-absolute bottom-0 start-0 p-2 bg-warning">Bottom-Start</div>
+                <div class="position-absolute bottom-0 end-0 p-2 bg-danger text-white">Bottom-End</div>
+                <div class="position-absolute top-50 start-50 translate-middle p-2 bg-dark text-white">Közép</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gyakorlati példák -->
+    <section id="peldak" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Gyakorlati Példák</h2>
+
+            <!-- Termék kártyák -->
+            <div class="row g-4 mb-5">
+                <div class="col-md-4">
+                    <div class="card shadow-sm h-100">
+                        <img src="https://picsum.photos/400/300?random=3" class="card-img-top" alt="Termék 1">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h5 class="card-title mb-0">Termék neve</h5>
+                                <span class="badge bg-primary">Új</span>
+                            </div>
+                            <p class="card-text">Termék leírása, ami bemutatja a legfontosabb tulajdonságokat.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button class="btn btn-sm btn-outline-secondary">Részletek</button>
+                                    <button class="btn btn-sm btn-primary">Kosárba</button>
+                                </div>
+                                <small class="text-muted">9999 Ft</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm h-100">
+                        <img src="https://picsum.photos/400/300?random=4" class="card-img-top" alt="Termék 2">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h5 class="card-title mb-0">Másik termék</h5>
+                                <span class="badge bg-danger">-20%</span>
+                            </div>
+                            <p class="card-text">Egy másik termék részletes leírása és tulajdonságai.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button class="btn btn-sm btn-outline-secondary">Részletek</button>
+                                    <button class="btn btn-sm btn-primary">Kosárba</button>
+                                </div>
+                                <small class="text-muted">7999 Ft</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm h-100">
+                        <img src="https://picsum.photos/400/300?random=5" class="card-img-top" alt="Termék 3">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h5 class="card-title mb-0">Harmadik termék</h5>
+                                <span class="badge bg-success">Raktáron</span>
+                            </div>
+                            <p class="card-text">A harmadik termék leírása és egyedi tulajdonságai.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button class="btn btn-sm btn-outline-secondary">Részletek</button>
+                                    <button class="btn btn-sm btn-primary">Kosárba</button>
+                                </div>
+                                <small class="text-muted">12999 Ft</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profil kártya -->
+            <div class="row mb-5">
+                <div class="col-md-6 mx-auto">
+                    <div class="card shadow">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="mb-0">Felhasználói Profil</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="text-center mb-4">
+                                <img src="https://picsum.photos/150/150?random=6" class="rounded-circle mb-3" alt="Profil kép">
+                                <h5 class="card-title">Felhasználó Neve</h5>
+                                <p class="card-text text-muted">Web Fejlesztő</p>
+                            </div>
+                            <div class="row text-center">
+                                <div class="col-4">
+                                    <h6>Projektek</h6>
+                                    <p class="text-muted">15</p>
+                                </div>
+                                <div class="col-4">
+                                    <h6>Követők</h6>
+                                    <p class="text-muted">1.2k</p>
+                                </div>
+                                <div class="col-4">
+                                    <h6>Értékelés</h6>
+                                    <p class="text-muted">4.8</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-primary">Profil szerkesztése</button>
+                                <button class="btn btn-outline-secondary">Üzenet küldése</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kapcsolat űrlap -->
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <div class="card shadow-lg">
+                        <div class="card-body p-5">
+                            <h3 class="text-center mb-4">Kapcsolatfelvétel</h3>
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label">Vezetéknév</label>
+                                        <input type="text" class="form-control" placeholder="Vezetéknév">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Keresztnév</label>
+                                        <input type="text" class="form-control" placeholder="Keresztnév">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Email</label>
+                                        <input type="email" class="form-control" placeholder="pelda@email.com">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Telefonszám</label>
+                                        <input type="tel" class="form-control" placeholder="+36 20 123 4567">
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label">Tárgy</label>
+                                        <select class="form-select">
+                                            <option selected disabled>Válassz témát...</option>
+                                            <option>Általános kérdés</option>
+                                            <option>Technikai segítség</option>
+                                            <option>Üzleti ajánlat</option>
+                                            <option>Egyéb</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label">Üzenet</label>
+                                        <textarea class="form-control" rows="5" placeholder="Írd ide az üzeneted..."></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="adatkezeles">
+                                            <label class="form-check-label" for="adatkezeles">
+                                                Elfogadom az adatkezelési tájékoztatót
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 text-center">
+                                        <button type="submit" class="btn btn-primary btn-lg px-5">Küldés</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lábléc -->
+    <footer class="egyedi-lablec mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h4 class="text-white mb-3">Bootstrap 5 Demo</h4>
+                    <p class="text-white-50">Modern és reszponzív weboldalak készítése egyszerűen, a Bootstrap 5 keretrendszer segítségével.</p>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="text-white mb-3">Gyors linkek</h5>
+                    <ul class="lablec-lista">
+                        <li><a href="#alapok" class="lablec-link">Alapok</a></li>
+                        <li><a href="#komponensek" class="lablec-link">Komponensek</a></li>
+                        <li><a href="#utilities" class="lablec-link">Utilities</a></li>
+                        <li><a href="#peldak" class="lablec-link">Példák</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="text-white mb-3">Kapcsolat</h5>
+                    <ul class="lablec-lista">
+                        <li class="text-white-50">📍 1234 Budapest, Demo utca 1.</li>
+                        <li class="text-white-50">📧 info@bootstrap-demo.hu</li>
+                        <li class="text-white-50">📞 +36 1 234 5678</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="border-top border-white-50 my-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="text-white-50 mb-0">© 2024 Bootstrap 5 Demo. Minden jog fenntartva.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white-50 text-decoration-none me-3">Adatvédelem</a>
+                    <a href="#" class="text-white-50 text-decoration-none">ÁSZF</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
